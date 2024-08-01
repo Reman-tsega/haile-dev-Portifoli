@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm, ValidationError } from '@formspree/react';
-import { ToastContainer, toast } from 'react-toastify';
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -15,33 +15,9 @@ const ContactPage = () => {
   if (state.succeeded) {
     toast.success("Your message has been sent successfully!");
 
-  }else{
-    toast.error("Something went wrong! Please try again.");
-  
   }
 const text = 'Get in touch'
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setError(false);
-    setSuccess(false);
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          form.current.reset();
-        },
-        () => {
-          setError(true);
-        }
-      );
-  };
 
   return (
     <motion.div

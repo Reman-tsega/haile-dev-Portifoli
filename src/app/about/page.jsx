@@ -41,12 +41,12 @@ const AboutPage = () => {
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
             I am a software developer with 2+ years of experience working on developing projects and platforms. I have strong experience designing and implementing robust,
-            scalable, and simple solutions to solve real-life business cases. For any project I'm invited to, I make sure that I have the time and skills to complete the project beyond your expectations.
+            scalable, and simple solutions to solve real-life business cases. For any project I &apos;m invited to, I make sure that I have the time and skills to complete the project beyond your expectations.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
             I deliver Professional work with a maximum( ✅100%) client satisfaction guarantee.
-            📞 let's talk!
+            📞 let &apos;s talk!
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
