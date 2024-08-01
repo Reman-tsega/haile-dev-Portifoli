@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -13,32 +14,66 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-          <Image src="/hero.png" alt="" fill className="object-contain" />
-        </div>
+        <motion.div
+          className="h-1/2 lg:h-full lg:w-1/2 relative px-4 mr-6"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <Image
+            src="/developer_photo.jpg"
+            alt="Developer"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <motion.div
+          className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center"
+          initial={{ opacity: 0, x: "100vw" }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           {/* TITLE */}
-          <h1 className="text-4xl md:text-6xl font-bold">
-            Crafting Digital Experiences, Designing Tomorrow.
-          </h1>
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            Creating Digital Masterpieces, Shaping the Future.
+          </motion.h1>
           {/* DESC */}
-          <p className="md:text-xl">
-            Welcome to my digital canvas, where innovation and creativity
-            converge. With a keen eye for aesthetics and a mastery of code, my
-            portfolio showcases a diverse collection of projects that reflect my
-            commitment to excellence.
-          </p>
+          <motion.p
+            className="md:text-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            Welcome to my digital portfolio, where technology meets artistry.
+            With a passion for design and a command of code, I bring to life a
+            variety of projects that embody innovation and quality.
+          </motion.p>
+
           {/* BUTTONS */}
-          <div className="w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-              View My Work
-            </button>
-            <button className="p-4 rounded-lg ring-1 ring-black">
-              Contact Me
-            </button>
-          </div>
-        </div>
+          <motion.div
+            className="w-full flex gap-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.4 }}
+          >
+            <Link href="/portfolio">
+              <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+                View My Work
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="p-4 rounded-lg ring-1 ring-black">
+                Contact Me
+              </button>
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </motion.div>
   );

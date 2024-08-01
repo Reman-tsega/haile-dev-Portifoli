@@ -7,35 +7,84 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    color: "from-blue-300 to-violet-300",
+    title: "Bizify Spot",
+    sub:"business social media",
+    desc: "A comprehensive business social media platform designed for businesses. It facilitates business integration, advertising, messaging, and product sales, enabling enhanced engagement and networking.",
+    img: "/bizifyspot.png",
+    link: "https://qa.bizfyspot.com/",
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    color: "from-red-300 to-blue-300",
+    title: "Sports Book",
+    sub:"betting website ",
+    desc: "A dynamic betting website offering a diverse range of games, from virtual sports to traditional events. Users can place bets, enjoy live updates, and experience a seamless wagering platform.",
+    img: "/sport_book.png",
+    link: "https://sportsbook-frontend-mu.vercel.app",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "Addis Pay",
+    sub:"payment gateway",
+    desc: "A versatile payment gateway that simplifies integration with banking systems and digital wallets. It supports smooth transactions, easy checkout processes, and robust payment management for businesses.",
+    img: "/addispay.png",
+    link: "https://addispay.et/",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    title: "Dir Link",
+    sub:"shipping connector dashboard",
+    desc: "A shipping connector providing a comprehensive dashboard for delivery companies. It enables efficient order administration and management of deliveries, streamlining logistics operations.",
+    img: "/dirlink.png",
+    link: "https://dirlink.addissystems.et/dashboard",
+  },
+  {
+    id: 5,
+    color: "from-purple-300 to-red-300",
+    title: "Mak Beauty Salon",
+    sub:"landing page",
+    desc: "A visually appealing landing page designed to showcase beauty services and products. It effectively promotes the salon’s offerings and enhances online visibility.",
+    img: "/mak_bauty_salon.png",
+    link: "https://www.makbeautysalonandspa.com/",
+  },
+  {
+    id: 6,
+    color: "from-purple-300 to-red-300",
+    title: "Dingo Restaurant",
+    sub:"landing page",
+    desc: "A visually appealing landing page designed to showcase restaurant services and products. It effectively promotes the restaurant’s offerings and enhances online visibility.",
+    img: "/restorant.png",
+    link: "https://reman-tsega.github.io/dingo-restaurant/",
+  },
+  {
+    id: 7,
+    color: "from-purple-300 to-red-300",
+    title: "Cafe Coffee",
+    sub:"landing page",
+    desc: "A visually appealing landing page designed to showcase coffee shop services and products. It effectively promotes the shop’s offerings and enhances online visibility.",
+    img: "/coffee_web.png",
+    link: "https://reman-tsega.github.io/cake_zone/",
+  },
+  {
+    id: 8,
+    color: "from-purple-300 to-red-300",
+    title: "Addis Systems",
+    sub:"landing page and ordering system",
+    desc: "A visually appealing landing page designed to showcase software company services and products. It effectively promotes the company’s offerings and enhances online visibility.",
+    img: "/public.png",
+    link: "https://www.addissystems.et/",
+  },
+  {
+    id: 9,
+    color: "from-purple-300 to-red-300",
+    title: "Noliga Engineering",
+    sub:"business social media",
+    desc: "A visually appealing landing page designed to showcase engineering services and products. It effectively promotes the company’s offerings and enhances online visibility.",
+    img: "/noliga.png",
+    link: "https://reman-tsega.github.io/noligaengineering/index.html",
   },
 ];
 
@@ -48,7 +97,7 @@ const PortfolioPage = () => {
   return (
     <motion.div
       className="h-full"
-      initial={{ y: "-200vh" }}
+      initial={{ y: "-100vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
@@ -56,7 +105,7 @@ const PortfolioPage = () => {
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+        <div className="sticky top-0 flex h-screen gap-2 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {items.map((item) => (
@@ -64,19 +113,38 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
-                  </div>
+                <div className="flex flex-col gap-2 py-2 text-white">
+                  <Link href={item.link} passHref>
+                    <h1 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-6xl">
+                      {item.title}
+                    </h1>
+                  </Link>
+                  <h6>{item.sub}</h6>
+                  <Link
+                    href={item.link}
+                    passHref
+                    className="relative block group"
+                  >
+                    <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] 2xl:w-[1000px] 2xl:h-[500px]">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        className="transition-transform duration-500 ease-in-out transform group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="absolute w-full h-full inset-0 bg-black opacity-0 group-hover:opacity-50 transform group-hover:scale-105 transition-opacity duration-900 ease-in-out flex items-center justify-center">
+                      <span className="text-white">See Demo</span>
+                    </div>
+                  </Link>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Demo</button>
-                  </Link>
+                  {/* <Link href={item.link} passHref>
+                      <button className="p-2 text-sm md:p-2 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold mx-4 py-2 rounded transition-transform duration-300 ease-in-out hover:scale-105">
+                        See Demo
+                      </button>
+                  </Link> */}
                 </div>
               </div>
             ))}
@@ -84,13 +152,13 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
+        <h1 className="text-7xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
             viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px] "
+            className="w-64 h-64 md:w-[500px] md:h-[500px]"
           >
             <defs>
               <path
@@ -100,7 +168,7 @@ const PortfolioPage = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
+                Software Developer and Team Leader
               </textPath>
             </text>
           </motion.svg>
