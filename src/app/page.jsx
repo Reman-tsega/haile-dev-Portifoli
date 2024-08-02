@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Homepage = () => {
-  const text = `Creating Digital Masterpieces, Shaping the Future.`
+  const text = ``
   return (
     <motion.div
       className="h-full"
@@ -42,6 +42,15 @@ const Homepage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
+            Creating Digital Masterpieces, Shaping the Future.
+          </motion.h1>
+          {/* DESC */}
+          <motion.p
+            className="md:text-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
             
             {text.split("").map((letter, index) => (
               <motion.span
@@ -57,19 +66,6 @@ const Homepage = () => {
                 {letter}
               </motion.span>
             ))}
-          </motion.h1>
-          {/* DESC */}
-          <motion.p
-            className="md:text-xl"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-          >
-            Welcome to my digital portfolio, where technology meets artistry.
-            With a passion for design and a command of code, I bring to life a
-            variety of projects that embody innovation and quality.
-            
-            
           </motion.p>
 
           {/* BUTTONS */}

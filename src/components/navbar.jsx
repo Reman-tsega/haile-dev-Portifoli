@@ -5,16 +5,19 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const links = [
-  {id:1, url: "/", title: "Home" },
-  {id:2, url: "/about", title: "About" },
-  { id:3, url: "/portfolio", title: "Portfolio" },
-  { id:4, url: "/contact", title: "Contact" },
+  { id: 1, url: "/", title: "Home" },
+  { id: 2, url: "/about", title: "About" },
+  { id: 3, url: "/portfolio", title: "Portfolio" },
+  { id: 4, url: "/contact", title: "Contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
 
   const topVariants = {
     closed: {
@@ -67,6 +70,22 @@ const Navbar = () => {
       opacity: 1,
     },
   };
+  const handleNavClickHome = () => {
+    console.log("home");
+    router.push("/");
+  };
+  const handleNavClickAbout = () => {
+    console.log("about");
+    router.push("/about");
+  };
+  const handleNavClickPortfolio = () => {
+    router.push("/portfolio");
+    console.log("por");
+  };
+  const handleNavClickContact = () => {
+    router.push("/contact");
+    console.log("contact");
+  };
 
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
@@ -99,8 +118,7 @@ const Navbar = () => {
         <Link href="https://t.me/kings_time">
           <Image src="/telegram.png" alt="" width={24} height={24} />
         </Link>
-        
-        
+
         <Link href="https://www.linkedin.com/in/haylemichael-tsega-2305651b5/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
@@ -136,15 +154,12 @@ const Navbar = () => {
             animate="opened"
             className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
-            {links.map((link) => (
-              <motion.div
-                variants={listItemVariants}
-                className=""
-                key={link.id}
-              >
-                <Link href={link.url}>{link.title}</Link>
-              </motion.div>
-            ))}
+            <div variants={listItemVariants} className="flex flex-col gap-12">
+              <button onClick={handleNavClickHome}>Home</button>
+              <button onClick={handleNavClickAbout}>About</button>
+              <button onClick={handleNavClickPortfolio}>Portfolio</button>
+              <button onClick={handleNavClickContact}>Contact</button>
+            </div>
           </motion.div>
         )}
       </div>
