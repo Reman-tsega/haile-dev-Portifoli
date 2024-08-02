@@ -11,7 +11,7 @@ const items = [
     title: "Bizify Spot",
     sub:"business social media",
     desc: "A comprehensive business social media platform designed for businesses. It facilitates business integration, advertising, messaging, and product sales, enabling enhanced engagement and networking.",
-    img: "https://haile-dev-portifoli.vercel.app/bizifyspot.png",
+    img: "/bizifyspot.PNG",
     link: "https://qa.bizfyspot.com/",
   },
   {
@@ -20,7 +20,7 @@ const items = [
     title: "Sports Book",
     sub:"betting website ",
     desc: "A dynamic betting website offering a diverse range of games, from virtual sports to traditional events. Users can place bets, enjoy live updates, and experience a seamless wagering platform.",
-    img: "https://haile-dev-portifoli.vercel.app/sport_book.png",
+    img: "/sport_book.PNG",
     link: "https://sportsbook-frontend-mu.vercel.app",
   },
   {
@@ -29,7 +29,7 @@ const items = [
     title: "Addis Pay",
     sub:"payment gateway",
     desc: "A versatile payment gateway that simplifies integration with banking systems and digital wallets. It supports smooth transactions, easy checkout processes, and robust payment management for businesses.",
-    img: "https://haile-dev-portifoli.vercel.app/addispay.png",
+    img: "/addispay.PNG",
     link: "https://addispay.et/",
   },
   {
@@ -38,7 +38,7 @@ const items = [
     title: "Dir Link",
     sub:"shipping connector dashboard",
     desc: "A shipping connector providing a comprehensive dashboard for delivery companies. It enables efficient order administration and management of deliveries, streamlining logistics operations.",
-    img: "https://haile-dev-portifoli.vercel.app/dirlink.png",
+    img: "/dirlink.PNG",
     link: "https://dirlink.addissystems.et/dashboard",
   },
   {
@@ -47,7 +47,7 @@ const items = [
     title: "Mak Beauty Salon",
     sub:"landing page",
     desc: "A visually appealing landing page designed to showcase beauty services and products. It effectively promotes the salon’s offerings and enhances online visibility.",
-    img: "https://haile-dev-portifoli.vercel.app/mak_bauty_salon.png",
+    img: "/mak_bauty_salon.PNG",
     link: "https://www.makbeautysalonandspa.com/",
   },
   {
@@ -56,7 +56,7 @@ const items = [
     title: "Dingo Restaurant",
     sub:"landing page",
     desc: "A visually appealing landing page designed to showcase restaurant services and products. It effectively promotes the restaurant’s offerings and enhances online visibility.",
-    img: "https://haile-dev-portifoli.vercel.app/restorant.png",
+    img: "/restorant.PNG",
     link: "https://reman-tsega.github.io/dingo-restaurant/",
   },
   {
@@ -65,7 +65,7 @@ const items = [
     title: "Cafe Coffee",
     sub:"landing page",
     desc: "A visually appealing landing page designed to showcase coffee shop services and products. It effectively promotes the shop’s offerings and enhances online visibility.",
-    img: "https://haile-dev-portifoli.vercel.app/coffee_web.png",
+    img: "/coffee_web.PNG",
     link: "https://reman-tsega.github.io/cake_zone/",
   },
   {
@@ -74,7 +74,7 @@ const items = [
     title: "Addis Systems",
     sub:"landing page and ordering system",
     desc: "A visually appealing landing page designed to showcase software company services and products. It effectively promotes the company’s offerings and enhances online visibility.",
-    img: "https://haile-dev-portifoli.vercel.app/public.png",
+    img: "/public.PNG",
     link: "https://www.addissystems.et/",
   },
   {
@@ -83,7 +83,7 @@ const items = [
     title: "Noliga Engineering",
     sub:"business social media",
     desc: "A visually appealing landing page designed to showcase engineering services and products. It effectively promotes the company’s offerings and enhances online visibility.",
-    img: "https://haile-dev-portifoli.vercel.app/noliga.png",
+    img: "/noliga.PNG",
     link: "https://reman-tsega.github.io/noligaengineering/index.html",
   },
 ];
