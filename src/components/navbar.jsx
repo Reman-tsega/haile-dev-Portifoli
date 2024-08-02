@@ -7,10 +7,10 @@ import NavLink from "./navLink";
 import { motion } from "framer-motion";
 
 const links = [
-  { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
-  { url: "/contact", title: "Contact" },
+  {id:1, url: "/", title: "Home" },
+  {id:2, url: "/about", title: "About" },
+  { id:3, url: "/portfolio", title: "Portfolio" },
+  { id:4, url: "/contact", title: "Contact" },
 ];
 
 const Navbar = () => {
@@ -73,7 +73,7 @@ const Navbar = () => {
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <NavLink link={link} key={link.title} />
+          <NavLink link={link} key={link.id} />
         ))}
       </div>
       {/* LOGO */}
@@ -140,7 +140,7 @@ const Navbar = () => {
               <motion.div
                 variants={listItemVariants}
                 className=""
-                key={link.title}
+                key={link.id}
               >
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>

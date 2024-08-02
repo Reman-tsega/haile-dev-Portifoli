@@ -2,7 +2,8 @@
 import emailjs from "@emailjs/browser";
 import { useForm, ValidationError } from '@formspree/react';
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { Fascinate_Inline } from "next/font/google";
+import { useEffect, useRef, useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,10 +13,37 @@ const ContactPage = () => {
   const [error, setError] = useState(false);
   const form = useRef();
   const [state, handleSubmit] = useForm("myzgwjrb");
-  if (state.succeeded) {
-    toast.success("Your message has been sent successfully!");
+  const [loading, setLoading] = useState(false);
+  const messageRef = useRef();
+  const emailRef = useRef();
 
+  
+useEffect(()=>{
+
+
+  if(state.submitting){
+    setSuccess(false);
+    setError(false)
+    setLoading(true)
   }
+  if (state.succeeded) {
+    setSuccess(true);
+    setLoading(false)
+    toast.success("Your message has been sent successfully! Thankyou");
+    messageRef.current.value = "";
+    emailRef.current.value = "";
+
+    
+  }
+  if (state.errors) {
+    setLoading(false)
+    setError(true)
+    toast.error("Something went wrong! Please try again.");
+  }
+},[state])
+
+
+
 const text = 'Get in touch'
 
 
@@ -114,6 +142,7 @@ const text = 'Get in touch'
           rows={6}
           className="bg-white border-2 border-gray-300 rounded p-4 outline-none"
           name="message"
+          ref={messageRef}
           id="message"
           type=  "text"
           placeholder="Your message here..."
@@ -125,6 +154,7 @@ const text = 'Get in touch'
       />
         <input
           name="email"
+          ref={emailRef}
           type="email"
           id="email"
           className="bg-white border-2 border-gray-300 rounded p-4 outline-none cursor-pointer"

@@ -114,7 +114,7 @@ const PortfolioPage = () => {
                 key={item.id}
               >
                 <div className="flex flex-col gap-2 py-2 text-white">
-                  <Link href={item.link} passHref>
+                  <Link href={item.link} target="_blank" passHref>
                     <h1 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-6xl">
                       {item.title}
                     </h1>
@@ -122,7 +122,7 @@ const PortfolioPage = () => {
                   <h6>{item.sub}</h6>
                   <Link
                     href={item.link}
-                    passHref
+                    target="_blank" passHref
                     className="relative block group"
                   >
                     <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] 2xl:w-[1000px] 2xl:h-[500px]">
@@ -140,7 +140,7 @@ const PortfolioPage = () => {
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  {/* <Link href={item.link} passHref>
+                  {/* <Link href={item.link} target="_blank" passHref>
                       <button className="p-2 text-sm md:p-2 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold mx-4 py-2 rounded transition-transform duration-300 ease-in-out hover:scale-105">
                         See Demo
                       </button>
