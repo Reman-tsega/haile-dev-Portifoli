@@ -6,31 +6,32 @@ import { useRef } from "react";
 
 const items = [
   {
+   
     id: 1,
-    color: "from-blue-300 to-violet-300",
-    title: "Bizify Spot",
-    sub:"business social media",
-    desc: "A comprehensive business social media platform designed for businesses. It facilitates business integration, advertising, messaging, and product sales, enabling enhanced engagement and networking.",
-    img: "/bizifyspot.PNG",
-    link: "https://qa.bizfyspot.com/",
-  },
-  {
-    id: 2,
-    color: "from-red-300 to-blue-300",
-    title: "Sports Book",
-    sub:"betting website ",
-    desc: "A dynamic betting website offering a diverse range of games, from virtual sports to traditional events. Users can place bets, enjoy live updates, and experience a seamless wagering platform.",
-    img: "/sport_book.PNG",
-    link: "https://sportsbook-frontend-mu.vercel.app",
-  },
-  {
-    id: 3,
     color: "from-violet-300 to-purple-300",
     title: "Addis Pay",
     sub:"payment gateway",
     desc: "A versatile payment gateway that simplifies integration with banking systems and digital wallets. It supports smooth transactions, easy checkout processes, and robust payment management for businesses.",
     img: "/addispay.PNG",
     link: "https://addispay.et/",
+  },
+  {
+    id: 2,
+    color: "from-purple-300 to-red-300",
+    title: "Addis Systems",
+    sub:"landing page and ordering system",
+    desc: "A visually appealing landing page designed to showcase software company services and products. It effectively promotes the company’s offerings and enhances online visibility.",
+    img: "/public.PNG",
+    link: "https://www.addissystems.et/
+  },
+  {
+    id: 3,
+    color: "from-blue-300 to-violet-300",
+    title: "Bizify Spot",
+    sub:"business social media",
+    desc: "A comprehensive business social media platform designed for businesses. It facilitates business integration, advertising, messaging, and product sales, enabling enhanced engagement and networking.",
+    img: "/bizifyspot.PNG",
+    link: "https://devbizfy.bizfyspot.com/",
   },
   {
     id: 4,
