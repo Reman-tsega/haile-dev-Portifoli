@@ -6,7 +6,6 @@ import { useRef } from "react";
 
 const items = [
   {
-   
     id: 1,
     color: "from-violet-300 to-purple-300",
     title: "Addis Pay",
@@ -22,7 +21,7 @@ const items = [
     sub:"landing page and ordering system",
     desc: "A visually appealing landing page designed to showcase software company services and products. It effectively promotes the company’s offerings and enhances online visibility.",
     img: "/public.PNG",
-    link: "https://www.addissystems.et/
+    link: "https://www.addissystems.et/"
   },
   {
     id: 3,
