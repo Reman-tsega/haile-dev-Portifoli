@@ -27,19 +27,23 @@ useEffect(()=>{
     setLoading(true)
   }
   if (state.succeeded) {
-    setSuccess(true);
-    setLoading(false)
-    toast.success("Your message has been sent successfully! Thankyou");
-    messageRef.current.value = "";
-    emailRef.current.value = "";
+  setSuccess(true);
+  setLoading(false);
+  toast.success("Your message has been sent successfully! Thank you", {
+    toastId: "successToast", // prevents duplicates
+  });
+  messageRef.current.value = "";
+  emailRef.current.value = "";
+}
 
-    
-  }
-  if (state.errors) {
-    setLoading(false)
-    setError(true)
-    toast.error("Something went wrong! Please try again.");
-  }
+if (state.errors) {
+  setLoading(false);
+  setError(true);
+  toast.error("Something went wrong! Please try again.", {
+    toastId: "errorToast",
+  });
+}
+
 },[state])
 
 

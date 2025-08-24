@@ -5,58 +5,76 @@ import Link from "next/link";
 import { useRef } from "react";
 
 const items = [
+  //   {
+  //   id: 0,
+  //   color: "from-blue-300 to-indigo-300",
+  //   title: "Dashen Super App",
+  //   sub: "Digital Banking & Lifestyle",
+  //   desc: "A large-scale fintech platform developed for Dashen Bank, one of Ethiopia’s leading financial institutions. The app seamlessly integrates digital banking and lifestyle services into one ecosystem. It provides secure digital payments, e-commerce, chat banking, budgeting and analytics tools, as well as lottery and gaming features—offering customers a unified, user-friendly financial experience.",
+  //   img: "/dashen-super-app.PNG",
+  //   link: "https://www.dashensuperapp.com//", // official bank/app link
+  // },
   {
     id: 1,
     color: "from-violet-300 to-purple-300",
     title: "Addis Pay",
-    sub:"payment gateway",
+    sub: "payment gateway",
     desc: "A versatile payment gateway that simplifies integration with banking systems and digital wallets. It supports smooth transactions, easy checkout processes, and robust payment management for businesses.",
     img: "/addispay.PNG",
     link: "https://addispay.et/",
   },
   {
+    id: 0,
+    color: "from-blue-300 to-indigo-300",
+    title: "Dashen Super App",
+    sub: "Digital Banking & Lifestyle",
+    desc: "A large-scale fintech platform developed for Dashen Bank, one of Ethiopia’s leading financial institutions. The app seamlessly integrates digital banking and lifestyle services into one ecosystem. It provides secure digital payments, e-commerce, chat banking, budgeting and analytics tools, as well as lottery and gaming features—offering customers a unified, user-friendly financial experience.",
+    img: "/dashen-super-app.PNG",
+    link: "https://www.dashensuperapp.com//", // official bank/app link
+  },
+  {
     id: 2,
     color: "from-purple-300 to-red-300",
     title: "Addis Systems",
-    sub:"landing page and ordering system",
+    sub: "landing page and ordering system",
     desc: "A visually appealing landing page designed to showcase software company services and products. It effectively promotes the company’s offerings and enhances online visibility.",
     img: "/addissystems.png",
-    link: "https://www.addissystems.et/"
+    link: "https://www.addissystems.et/",
   },
   {
     id: 3,
     color: "from-blue-300 to-violet-300",
     title: "Blue Clerk",
-    sub:"Housing Broker",
+    sub: "Housing Broker",
     desc: "BlueClerk is designed specifically for the new housing industry. Unlike most CRM’s which have a wide range features, BlueClerk has zeroed in on the housing industry’s specific needs.",
     img: "/blueclerk.png",
     link: "https://blueclerk.com/",
   },
   {
-id:4,
-color: "from-purple-300 to-red-300",
-title: "Addis Bike Rental System",
-sub: "Bicycle rental system in Addis Ababa",
-desc: "A bicycle rental platform with an admin dashboard and mobile app for efficient bike, user, and transaction management.",
-img: "/addisbikedashboard.png",
-link:"https://admin.addisbike.org/"
+    id: 4,
+    color: "from-purple-300 to-red-300",
+    title: "Addis Bike Rental System",
+    sub: "Bicycle rental system in Addis Ababa",
+    desc: "A bicycle rental platform with an admin dashboard and mobile app for efficient bike, user, and transaction management.",
+    img: "/addisbikedashboard.png",
+    link: "https://admin.addisbike.org/",
   },
- 
+
   {
     id: 7,
     color: "from-purple-300 to-red-300",
     title: "Aurora General PLC Management System",
-    sub:"Company profile and management",
+    sub: "Company profile and management",
     desc: "A platform for managing company portfolios, products, job postings, applicants, and CRM with dynamic blog features.",
     img: "/Aurora.png",
     link: "https://www.auroraplc.com/",
   },
-  
+
   {
     id: 9,
     color: "from-purple-300 to-red-300",
     title: "ChuChu Beauty School",
-    sub:"School management system",
+    sub: "School management system",
     desc: "A streamlined platform for student administration, course management, and financial tracking.",
     img: "/chuchu.png",
     link: "http://196.188.249.33:6053/",
@@ -65,7 +83,7 @@ link:"https://admin.addisbike.org/"
     id: 6,
     color: "from-purple-300 to-red-300",
     title: "Mak Beauty Salon",
-    sub:"landing page",
+    sub: "landing page",
     desc: "A visually appealing landing page designed to showcase beauty services and products. It effectively promotes the salon’s offerings and enhances online visibility.",
     img: "/mak_bauty_salon.PNG",
     link: "https://www.makbeautysalonandspa.com/",
@@ -74,17 +92,17 @@ link:"https://admin.addisbike.org/"
     id: 5,
     color: "from-purple-300 to-red-300",
     title: "Dir Link",
-    sub:"shipping connector dashboard",
+    sub: "shipping connector dashboard",
     desc: "A shipping connector providing a comprehensive dashboard for delivery companies. It enables efficient order administration and management of deliveries, streamlining logistics operations.",
     img: "/dirlink.PNG",
     link: "https://dirlink.addissystems.et/dashboard",
   },
-  
+
   {
     id: 8,
     color: "from-purple-300 to-red-300",
     title: "Cafe Coffee",
-    sub:"landing page",
+    sub: "landing page",
     desc: "A visually appealing landing page designed to showcase coffee shop services and products. It effectively promotes the shop’s offerings and enhances online visibility.",
     img: "/coffee_web.PNG",
     link: "https://reman-tsega.github.io/cake_zone/",
@@ -93,7 +111,7 @@ link:"https://admin.addisbike.org/"
     id: 10,
     color: "from-purple-300 to-red-300",
     title: "Noliga Engineering",
-    sub:"business social media",
+    sub: "business social media",
     desc: "A visually appealing landing page designed to showcase engineering services and products. It effectively promotes the company’s offerings and enhances online visibility.",
     img: "/noliga.PNG",
     link: "https://reman-tsega.github.io/noligaengineering/index.html",
@@ -134,7 +152,8 @@ const PortfolioPage = () => {
                   <h6>{item.sub}</h6>
                   <Link
                     href={item.link}
-                    target="_blank" passHref
+                    target="_blank"
+                    passHref
                     className="relative block group"
                   >
                     <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] 2xl:w-[1000px] 2xl:h-[500px]">
@@ -149,7 +168,7 @@ const PortfolioPage = () => {
                       <span className="text-white">See Demo</span>
                     </div>
                   </Link>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80  lg:w-[900px] lg:text-lg xl:w-[900px]">
                     {item.desc}
                   </p>
                   {/* <Link href={item.link} target="_blank" passHref>
@@ -165,7 +184,8 @@ const PortfolioPage = () => {
       </div>
       <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
         <h1 className="text-7xl">Do you have a project?</h1>
-        <div className="relative">
+        <div className="relative flex items-center justify-center">
+          {/* Rotating circle text */}
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
@@ -184,9 +204,15 @@ const PortfolioPage = () => {
               </textPath>
             </text>
           </motion.svg>
+
+          {/* Hire Me button (always clickable) */}
           <Link
             href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
+            className="z-50 w-24 h-24 md:w-32 md:h-32 absolute 
+                 bg-black text-white text-lg md:text-xl 
+                 rounded-full flex items-center justify-center 
+                 shadow-lg hover:scale-110 hover:bg-gray-800 
+                 transition-transform duration-300 ease-in-out"
           >
             Hire Me
           </Link>
