@@ -41,7 +41,7 @@ const AboutPage = () => {
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Committed to delivering scalable, secure, and efficient solutions that exceed expectations. 📞 Let's connect!
+              Committed to delivering scalable, secure, and efficient solutions that exceed expectations. 📞 Let&apos;s connect!
             </span>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
