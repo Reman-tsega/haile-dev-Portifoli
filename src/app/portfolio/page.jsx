@@ -29,7 +29,7 @@ const items = [
     title: "Dashen Super App",
     sub: "Digital Banking & Lifestyle",
     desc: "A large-scale fintech platform developed for Dashen Bank, one of Ethiopia’s leading financial institutions. The app seamlessly integrates digital banking and lifestyle services into one ecosystem. It provides secure digital payments, e-commerce, chat banking, budgeting and analytics tools, as well as lottery and gaming features-offering customers a unified, user-friendly financial experience.",
-    img: "/dashen-super-app.PNG",
+    img: "/dashen_super_app.PNG",
     link: "https://www.dashensuperapp.com//", // official bank/app link
   },
   {
