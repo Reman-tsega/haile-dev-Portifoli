@@ -74,6 +74,7 @@ const Navbar = () => {
     console.log("home");
     router.push("/");
   };
+
   const handleNavClickAbout = () => {
     console.log("about");
     router.push("/about");

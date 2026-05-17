@@ -1,8 +1,8 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useState } from "react";
 
 const items = [
   //   {
@@ -119,100 +119,155 @@ const items = [
 ];
 
 const PortfolioPage = () => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const [activeItem, setActiveItem] = useState(null);
 
   return (
     <motion.div
-      className="h-full"
-      initial={{ y: "-100vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      className="min-h-screen bg-gray-100 text-slate-900"
+      initial={{ opacity: 0, y: 32 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          My Works
-        </div>
-        <div className="sticky top-0 flex h-screen gap-2 items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
-            {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
-                key={item.id}
-              >
-                <div className="flex flex-col gap-2 py-2 text-white">
-                  <Link href={item.link} target="_blank" passHref>
-                    <h1 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-6xl">
-                      {item.title}
-                    </h1>
-                  </Link>
-                  <h6>{item.sub}</h6>
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <header className="mb-12 text-center">
+          <p className="text-sm uppercase tracking-[0.5em] text-violet-500">
+            Portfolio
+          </p>
+          <h1 className="mt-4 text-4xl font-semibold md:text-5xl lg:text-6xl text-slate-900">
+            Selected projects
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-500 md:text-base">
+            A clean, responsive showcase of recent work with polished card layouts.
+          </p>
+        </header>
+
+        <section className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((item) => (
+            <article
+              key={`${item.id}-${item.title}`}
+              className="flex flex-col overflow-hidden rounded-[1.5rem] border border-slate-200 bg-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-300/30"
+            >
+              <div className="relative h-64 w-full overflow-hidden bg-gray-100">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-contain transition duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+
+              <div className="flex flex-1 flex-col gap-4 p-6 md:p-8">
+                <div>
+                  <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                    {item.title}
+                  </h2>
+                  <p className="mt-2 text-sm uppercase tracking-[0.2em] text-violet-500">
+                    {item.sub}
+                  </p>
+                </div>
+
+                <p className="text-sm leading-7 text-slate-600 md:text-base">
+                  {item.desc}
+                </p>
+
+                <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <span className="inline-flex items-center rounded-full bg-slate-200 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-700">
+                    Preview Mode
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setActiveItem(item)}
+                    className="inline-flex items-center justify-center rounded-full bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition duration-300 hover:bg-violet-500"
+                  >
+                    Open Preview
+                  </button>
+                  {/*
                   <Link
                     href={item.link}
                     target="_blank"
-                    passHref
-                    className="relative block group"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-full bg-violet-500 px-4 py-2 text-sm font-semibold text-white transition duration-300 hover:bg-violet-400"
                   >
-                    <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] 2xl:w-[1000px] 2xl:h-[500px]">
-                      <Image
-                        src={item.img}
-                        alt={item.title}
-                        fill
-                        className="transition-transform duration-500 ease-in-out transform group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="absolute w-full h-full inset-0 bg-black opacity-0 group-hover:opacity-50 transform group-hover:scale-105 transition-opacity duration-900 ease-in-out flex items-center justify-center">
-                      <span className="text-white">See Demo</span>
-                    </div>
+                    View Project
                   </Link>
-                  <p className="w-80  lg:w-[900px] lg:text-lg xl:w-[900px]">
-                    {item.desc}
-                  </p>
-                  {/* <Link href={item.link} target="_blank" passHref>
-                      <button className="p-2 text-sm md:p-2 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold mx-4 py-2 rounded transition-transform duration-300 ease-in-out hover:scale-105">
-                        See Demo
-                      </button>
-                  </Link> */}
+                  */}
                 </div>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </article>
+          ))}
+        </section>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-7xl">Do you have a project?</h1>
-        <div className="relative flex items-center justify-center">
-          {/* Rotating circle text */}
-          <motion.svg
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px]"
-          >
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-              />
-            </defs>
-            <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
-                Software Developer and Team Leader
-              </textPath>
-            </text>
-          </motion.svg>
 
-          {/* Hire Me button (always clickable) */}
+      {activeItem && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100/95 p-4"
+          onClick={() => setActiveItem(null)}
+        >
+          <div
+            className="w-full max-w-5xl overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-2xl shadow-slate-300/30"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex flex-col gap-4 p-6 md:p-8 lg:flex-row lg:gap-8">
+              <div className="relative h-80 w-full overflow-hidden bg-gray-100 lg:h-[28rem] lg:w-1/2">
+                <Image
+                  src={activeItem.img}
+                  alt={activeItem.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="flex flex-1 flex-col gap-4 text-slate-900">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.35em] text-violet-300">
+                      Project Preview
+                    </p>
+                    <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                      {activeItem.title}
+                    </h2>
+                    <p className="mt-2 text-sm text-slate-300">
+                      {activeItem.sub}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setActiveItem(null)}
+                    className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-900 transition duration-300 hover:bg-slate-200"
+                  >
+                    Close
+                  </button>
+                </div>
+                
+                <p className="text-sm leading-7 text-slate-700 md:text-base">
+                  {activeItem.desc}
+                </p>
+
+                {/*
+                <Link
+                  href={activeItem.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-violet-500 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-violet-400"
+                >
+                  Open Live Site
+                </Link>
+                */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="border-t border-white/10 bg-slate-950/95 px-6 py-20">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 text-center">
+          <h2 className="text-4xl font-semibold md:text-5xl">Do you have a project?</h2>
+          <p className="max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
+            I build responsive and polished web solutions that are easy to use, fast, and visually compelling. Let's bring your idea to life.
+          </p>
           <Link
             href="/contact"
-            className="z-50 w-24 h-24 md:w-32 md:h-32 absolute 
-                 bg-black text-white text-lg md:text-xl 
-                 rounded-full flex items-center justify-center 
-                 shadow-lg hover:scale-110 hover:bg-gray-800 
-                 transition-transform duration-300 ease-in-out"
+            className="inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition duration-300 hover:bg-slate-200"
           >
             Hire Me
           </Link>
