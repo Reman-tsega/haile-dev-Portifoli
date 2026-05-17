@@ -137,7 +137,8 @@ const PortfolioPage = () => {
             Selected projects
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-500 md:text-base">
-            A clean, responsive showcase of recent work with polished card layouts.
+            A clean, responsive showcase of recent work with polished card
+            layouts.
           </p>
         </header>
 
@@ -238,7 +239,7 @@ const PortfolioPage = () => {
                     Close
                   </button>
                 </div>
-                
+
                 <p className="text-sm leading-7 text-slate-700 md:text-base">
                   {activeItem.desc}
                 </p>
@@ -261,9 +262,12 @@ const PortfolioPage = () => {
 
       <div className="border-t border-white/10 bg-slate-950/95 px-6 py-20">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 text-center">
-          <h2 className="text-4xl font-semibold md:text-5xl">Do you have a project?</h2>
+          <h2 className="text-4xl font-semibold md:text-5xl">
+            Do you have a project?
+          </h2>
           <p className="max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
-            I build responsive and polished web solutions that are easy to use, fast, and visually compelling. Let's bring your idea to life.
+            I build responsive and polished web solutions that are easy to use,
+            fast, and visually compelling. Let's bring your idea to life.
           </p>
           <Link
             href="/contact"
