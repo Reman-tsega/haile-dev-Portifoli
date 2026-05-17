@@ -267,7 +267,7 @@ const PortfolioPage = () => {
           </h2>
           <p className="max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
             I build responsive and polished web solutions that are easy to use,
-            fast, and visually compelling. Let's bring your idea to life.
+            fast, and visually compelling. Let&apos;s bring your idea to life.
           </p>
           <Link
             href="/contact"

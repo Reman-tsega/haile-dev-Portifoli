@@ -1,55 +1,45 @@
 "use client";
-import emailjs from "@emailjs/browser";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
-import { Fascinate_Inline } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const form = useRef();
   const [state, handleSubmit] = useForm("myzgwjrb");
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const messageRef = useRef();
   const emailRef = useRef();
 
-  
-useEffect(()=>{
+  useEffect(() => {
+    if (state.submitting) {
+      setSuccess(false);
+      setError(false);
+      setLoading(true);
+    }
+    if (state.succeeded) {
+      setSuccess(true);
+      setLoading(false);
+      toast.success("Your message has been sent successfully! Thank you", {
+        toastId: "successToast", // prevents duplicates
+      });
+      messageRef.current.value = "";
+      emailRef.current.value = "";
+    }
 
+    if (state.errors) {
+      setLoading(false);
+      setError(true);
+      toast.error("Something went wrong! Please try again.", {
+        toastId: "errorToast",
+      });
+    }
+  }, [state]);
 
-  if(state.submitting){
-    setSuccess(false);
-    setError(false)
-    setLoading(true)
-  }
-  if (state.succeeded) {
-  setSuccess(true);
-  setLoading(false);
-  toast.success("Your message has been sent successfully! Thank you", {
-    toastId: "successToast", // prevents duplicates
-  });
-  messageRef.current.value = "";
-  emailRef.current.value = "";
-}
-
-if (state.errors) {
-  setLoading(false);
-  setError(true);
-  toast.error("Something went wrong! Please try again.", {
-    toastId: "errorToast",
-  });
-}
-
-},[state])
-
-
-
-const text = 'Get in touch'
-
+  const text = "Get in touch";
 
   return (
     <motion.div
@@ -60,7 +50,7 @@ const text = 'Get in touch'
     >
       {/* CONTACT INFORMATION */}
       <div className="lg:w-1/2 flex flex-col items-center lg:items-start gap-8 lg:gap-12 mb-8 lg:mb-0">
-      <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -85,7 +75,8 @@ const text = 'Get in touch'
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
+          I’m always open to discussing new projects, creative ideas, or
+          opportunities to be part of your visions. Feel free to reach out!
         </motion.p>
         <motion.div
           className="flex flex-col gap-4 text-lg"
@@ -95,7 +86,10 @@ const text = 'Get in touch'
         >
           <div className="flex items-center gap-4">
             <span className="font-bold text-gray-800">Email:</span>
-            <a href="mailto:your-email@example.com" className="text-blue-500 hover:underline">
+            <a
+              href="mailto:your-email@example.com"
+              className="text-blue-500 hover:underline"
+            >
               remantsega@gamil.com
             </a>
           </div>
@@ -113,13 +107,19 @@ const text = 'Get in touch'
           </div>
           <div className="flex items-center gap-4">
             <span className="font-bold text-gray-800">LinkedIn:</span>
-            <a href="https://www.linkedin.com/in/haylemichael-tsega-2305651b5/" className="text-blue-500 hover:underline">
+            <a
+              href="https://www.linkedin.com/in/haylemichael-tsega-2305651b5/"
+              className="text-blue-500 hover:underline"
+            >
               linkedin
             </a>
           </div>
           <div className="flex items-center gap-4">
             <span className="font-bold text-gray-800">GitHub:</span>
-            <a href="https://github.com/Reman-tsega" className="text-blue-500 hover:underline">
+            <a
+              href="https://github.com/Reman-tsega"
+              className="text-blue-500 hover:underline"
+            >
               github
             </a>
           </div>
@@ -127,8 +127,8 @@ const text = 'Get in touch'
       </div>
       {/* FORM CONTAINER */}
       <form
-      onSubmit={handleSubmit}
-      method="post"
+        onSubmit={handleSubmit}
+        method="post"
         // onSubmit={sendEmail}
         action="https://formspree.io/f/myzgwjrb"
         ref={form}
@@ -148,14 +148,14 @@ const text = 'Get in touch'
           name="message"
           ref={messageRef}
           id="message"
-          type=  "text"
+          type="text"
           placeholder="Your message here..."
         />
-        <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
         <input
           name="email"
           ref={emailRef}
@@ -164,13 +164,10 @@ const text = 'Get in touch'
           className="bg-white border-2 border-gray-300 rounded p-4 outline-none cursor-pointer"
           placeholder="email"
         />
-<ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
         <button
-          type="submit" disabled={state.submitting}
+          type="submit"
+          disabled={state.submitting}
           className="bg-blue-500 text-white rounded p-4 font-semibold hover:bg-blue-600 transition"
         >
           Send Message
@@ -195,9 +192,8 @@ const text = 'Get in touch'
             Something went wrong! Please try again.
           </motion.span>
         )}
-      </form>      
+      </form>
       <ToastContainer />
-
     </motion.div>
   );
 };
