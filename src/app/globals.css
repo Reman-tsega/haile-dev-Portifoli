@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── Smooth scroll ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed40;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed80;
+}
+
+/* ─── Selection colour ─── */
+::selection {
+  background: #7c3aed30;
+  color: inherit;
+}
+
+/* ─── Focus visible ring ─── */
+:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Prevent layout shift on scrollbar appear ─── */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ─── Gradient mesh animation keyframes ─── */
+@keyframes blob-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%       { transform: scale(1.08); opacity: 0.9; }
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── Utility: gradient text shimmer ─── */
+.gradient-shimmer {
+  background: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #a78bfa 40%,
+    #7c3aed 60%,
+    #6d28d9 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── Utility: no-scrollbar ─── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─── Print styles for resume ─── */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  a { text-decoration: none; color: inherit; }
+  .print-break-inside-avoid { break-inside: avoid; }
+}
+
+/* ─── Reduced motion: respect system accessibility preference ─── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gradient-shimmer { animation: none; }
+}
