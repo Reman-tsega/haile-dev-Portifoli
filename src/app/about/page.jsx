@@ -9,79 +9,91 @@ const skillGroups = [
   {
     label: "Languages",
     color: "bg-violet-600",
-    skills: ["Go", "JavaScript", "TypeScript", "Python", "C/C++"],
-  },
-  {
-    label: "Backend",
-    color: "bg-blue-600",
-    skills: ["Node.js", "Express.js", "Gin", "gRPC", "REST API"],
+    skills: ["TypeScript", "JavaScript (ES2022+)", "SQL", "Go", "Bash"],
   },
   {
     label: "Frontend",
     color: "bg-indigo-600",
-    skills: ["React", "Next.js", "Redux"],
+    skills: ["React.js", "Next.js", "Remix", "Tailwind CSS", "WebSocket Client"],
   },
   {
-    label: "Databases",
-    color: "bg-emerald-600",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "ScyllaDB"],
+    label: "Backend",
+    color: "bg-blue-600",
+    skills: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "WebSocket Servers", "Microservices"],
   },
   {
-    label: "Messaging & Queues",
-    color: "bg-orange-600",
-    skills: ["Kafka", "RabbitMQ"],
-  },
-  {
-    label: "Cloud & DevOps",
+    label: "Cloud & Serverless",
     color: "bg-sky-600",
-    skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Git"],
+    skills: ["AWS Lambda", "API Gateway", "Amazon S3", "Amazon EC2", "Amazon RDS", "Serverless Framework"],
   },
   {
-    label: "Architecture",
+    label: "Databases & Caching",
+    color: "bg-emerald-600",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+  },
+  {
+    label: "DevOps & Tooling",
+    color: "bg-orange-600",
+    skills: ["Docker", "Git / GitHub", "CI/CD Pipelines", "Linux"],
+  },
+  {
+    label: "FinTech Domain",
     color: "bg-rose-600",
-    skills: ["Microservices", "Event-Driven", "Payment Systems", "gRPC", "Saga Pattern"],
+    skills: ["Payment Gateways", "Automated Reconciliation", "Agency Banking", "Internet Banking", "PCI-DSS"],
   },
 ];
 
 const experiences = [
   {
     side: "left",
-    title: "Senior Full-Stack Developer & Tech Lead",
+    title: "Senior Full-Stack Engineer",
     company: "EagleLion System Technology",
     period: "Feb 2025 – Present",
     highlights: [
-      "Lead a cross-functional engineering squad building high-concurrency microservices for Dashen Internet Banking, Edil Lottery, and Agency Banking platforms.",
-      "Engineered secure RESTful APIs and real-time dashboards using Node.js, TypeScript, and React, reducing transactional processing latency.",
-      "Developed core lottery transactional logic with cryptographic seed validation and zero-loss ledger logging to handle extreme traffic spikes.",
-      "Orchestrate end-to-end code audits, security reviews, and technical mentorship across all distributed environments.",
+      "Architected a production-grade serverless backend on AWS Lambda and API Gateway for a banking Super App with 1M+ active users, sustaining sub-150ms P99 response times at 58,000+ concurrent requests per second.",
+      "Deployed an Automated Reconciliation System across 280+ post office agency nodes, eliminating manual errors and reducing settlement cycle time by 78%.",
+      "Integrated Redis caching, reducing PostgreSQL load by 72% and cutting average API response from 680ms to 140ms during peak banking hours.",
     ],
-    tech: ["Node.js", "TypeScript", "React", "Go", "Kafka", "Redis", "PostgreSQL", "Kubernetes"],
-    impact: "Enterprise fintech scale",
+    tech: ["Node.js", "TypeScript", "AWS Lambda", "Redis", "PostgreSQL", "Express.js", "React"],
+    impact: "1M+ active users",
   },
   {
     side: "right",
-    title: "Full-Stack Software Developer",
-    company: "Addispay Financial Technology",
-    period: "2023 – 2025",
+    title: "Full-Stack Engineer",
+    company: "Independent (Freelance)",
+    period: "Jan 2024 – Present",
     highlights: [
-      "Designed, developed, and deployed cross-platform merchant payment solutions and customer-facing portals using React, Node.js, and Express.",
-      "Integrated secure third-party financial clearing APIs with multi-tier session management across sensitive balance settlement operations.",
-      "Optimized PostgreSQL query execution plans, reducing latency in financial auditing pipelines by 40%.",
+      "Built a real-time fleet management platform for 400+ active vehicles with WebSocket live map updates and event-driven GPS ingestion tracking 5,000+ daily trips.",
+      "Architected a multi-tenant SaaS backend with row-level tenant isolation and RBAC, supporting 18+ enterprise clients with zero cross-tenant incidents.",
+      "Secured all API endpoints with JWT, HMAC signing, and rate limiting — 100% clean penetration test results.",
     ],
-    tech: ["Node.js", "Express.js", "React", "PostgreSQL", "MongoDB", "Redis"],
-    impact: "40% API latency reduction",
+    tech: ["Node.js", "TypeScript", "React", "Next.js", "PostgreSQL", "WebSocket", "JWT"],
+    impact: "18+ enterprise clients",
   },
   {
     side: "left",
-    title: "Code Coach",
-    company: "Code Jika NGO",
-    period: "Oct 2022 – Present",
+    title: "Full-Stack Engineer",
+    company: "Addispay Financial Technology",
+    period: "Jan 2024 – Feb 2025",
     highlights: [
-      "Enabling African students to become leaders in the digital industry through CodeJika — fun, real-world coding for teens.",
-      "Instructed high school students in HTML5, CSS3, and JavaScript, facilitating interactive lab sessions and collaborative projects.",
+      "Built transaction monitoring dashboards tracking 35,000+ daily transactions, reducing average review time by 40%.",
+      "Secured payment gateway endpoints with JWT tokenization, HMAC request signing, and input sanitization, eliminating SQL injection and replay-attack vulnerabilities.",
+      "Reduced frontend bundle size by 38%, improving Time-to-Interactive by 2.1 seconds.",
     ],
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    impact: "Future African developers",
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Redis"],
+    impact: "35,000+ daily transactions",
+  },
+  {
+    side: "right",
+    title: "Code Coach & Technical Instructor",
+    company: "Code Jika NGO",
+    period: "2022 – 2023",
+    highlights: [
+      "Mentored 90+ aspiring developers through structured curricula covering HTML, CSS, JavaScript, and full-stack project architecture, achieving an 85% course completion rate.",
+      "Introduced industry-standard Git workflows, code review practices, and agile habits to accelerate graduates' time to first job placement.",
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript", "Git"],
+    impact: "90+ students mentored",
   },
 ];
 
@@ -153,21 +165,21 @@ const AboutPage = () => {
             </div>
             <div className="flex flex-col gap-4 text-sm text-gray-700 leading-relaxed">
               <p>
-                I&apos;m Haylemichael Tsega — a Senior Full-Stack Developer and Technical Team Lead
-                with 5 years of experience building production infrastructure in fintech, digital
-                banking, and distributed systems. I studied Electrical and Computer Engineering
-                (Computer Focus) at Addis Ababa Science and Technology University (AASTU),
-                graduating with Great Distinction (GPA 3.81/4.0), and my graduation project
-                on Property Security and Warehouse Management was awarded by Inobizz and the Korean
-                Embassy.
+                I&apos;m Haylemichael Tsega — a Senior Full-Stack Engineer with 5+ years of
+                production experience architecting high-throughput distributed systems, real-time
+                financial platforms, and cloud-native microservices. I studied Electrical and
+                Computer Engineering (Computer Focus) at Addis Ababa Science and Technology
+                University (AASTU), graduating with Great Distinction (GPA 3.81/4.0). My
+                graduation project on Property Security and Warehouse Management was awarded
+                by Inobizz and the Korean Embassy.
               </p>
               <p>
-                My core expertise spans the full JavaScript/TypeScript stack — Node.js, Express,
-                React, Next.js — combined with Python for automation and backend services, and Go
-                for high-throughput systems. I currently lead the engineering squad at EagleLion
-                System Technology, building enterprise fintech products for Dashen Bank. I also
-                volunteer as a Code Coach at Code Jika NGO, helping African high school students
-                build coding skills.
+                My stack centers on Node.js, TypeScript, React, and AWS serverless infrastructure.
+                At EagleLion System Technology I architect backend systems serving 1M+ active users
+                on a banking Super App — including an Automated Reconciliation System that cut
+                settlement cycle time by 78% across 280+ post office agency nodes. Deep expertise
+                in PCI-DSS-compliant payment systems, multi-tenant SaaS design, and Redis-backed
+                performance optimization.
               </p>
               <p>
                 I design systems to survive production — observable, horizontally scalable,
@@ -185,7 +197,7 @@ const AboutPage = () => {
                   View Portfolio →
                 </button>
               </Link>
-              <a href="/HAILEMIKAEL ID.pdf" download>
+              <a href="/Haylemichael_Tsega_Resume.pdf" download>
                 <button className="px-5 py-2.5 rounded-full ring-1 ring-violet-400 text-violet-600 text-sm font-semibold hover:bg-violet-50 transition-colors">
                   Download CV
                 </button>

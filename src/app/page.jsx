@@ -259,7 +259,7 @@ export default function Homepage() {
                   View My Work →
                 </button>
               </Link>
-              <a href="/HAILEMIKAEL ID.pdf" download>
+              <a href="/Haylemichael_Tsega_Resume.pdf" download>
                 <button className="px-6 py-3 rounded-full border border-slate-700 text-slate-300 text-sm font-semibold hover:bg-slate-800 hover:text-white transition-colors">
                   Download CV
                 </button>
@@ -555,7 +555,7 @@ export default function Homepage() {
                   View Portfolio →
                 </button>
               </Link>
-              <a href="/HAILEMIKAEL ID.pdf" download>
+              <a href="/Haylemichael_Tsega_Resume.pdf" download>
                 <button className="px-8 py-4 rounded-full border border-white/20 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
                   Download CV
                 </button>

@@ -5,62 +5,78 @@ import Link from "next/link";
 
 const experience = [
   {
-    title: "Senior Full-Stack Developer & Technical Team Lead",
+    title: "Senior Full-Stack Engineer",
     company: "EagleLion System Technology",
     location: "Addis Ababa, Ethiopia",
     period: "Feb 2025 – Present",
     badge: "Current",
     points: [
-      "Lead a cross-functional engineering squad architecting, optimizing, and maintaining high-concurrency microservices for enterprise banking, fintech, and commercial lottery platforms.",
-      "Engineered secure, high-throughput RESTful APIs and real-time dashboards using Node.js, TypeScript, and React for the Dashen Internet Banking Platform, reducing transactional latency and improving user workflow transitions.",
-      "Developed core transactional state logic, cryptographic random seed validation, and zero-loss ledger logging for the Dashen Edil Lottery Game to handle extreme traffic spikes.",
-      "Designed and launched a decentralized Agency Banking Service routing layer with bulletproof input validation and high-availability error management configurations.",
-      "Orchestrate end-to-end code audits, security compliance reviews, and technical mentorship sessions across all distributed frontend and backend environments.",
+      "Architected a production-grade serverless backend on AWS Lambda and API Gateway for a banking Super App with 1M+ active users, sustaining sub-150ms P99 response times at 58,000+ concurrent requests per second.",
+      "Engineered real-time event processing pipelines in Node.js and TypeScript to ingest and route high-frequency financial webhooks, reducing end-to-end event propagation latency by 60% through batching and async queue optimizations.",
+      "Optimized AWS Lambda cold-start behavior through dependency pruning and provisioned concurrency, eliminating 2.8s of initialization overhead from payment flows and reducing cold-start frequency by 74%.",
+      "Engineered 65+ RESTful API endpoints for 150,000+ active internet banking customers, maintaining strict PCI-DSS-aligned data security and input validation standards.",
+      "Designed and deployed an Automated Reconciliation System synchronizing real-time balances across 280+ post office agency nodes, eliminating manual errors and reducing settlement cycle time by 78%.",
+      "Integrated Redis distributed caching across high-frequency query paths, reducing primary PostgreSQL load by 72% and improving average API response time from 680ms to 140ms during peak hours.",
     ],
-    tech: ["Node.js", "TypeScript", "React", "Go", "Kafka", "Redis", "PostgreSQL", "Kubernetes"],
+    tech: ["Node.js", "TypeScript", "AWS Lambda", "API Gateway", "Redis", "PostgreSQL", "Express.js", "React"],
   },
   {
-    title: "Full-Stack Software Developer",
-    company: "Addispay Financial Technology",
+    title: "Full-Stack Engineer",
+    company: "Independent (Freelance)",
     location: "Addis Ababa, Ethiopia",
-    period: "2023 – 2025",
+    period: "Jan 2024 – Present",
     badge: null,
     points: [
-      "Designed, developed, and deployed cross-platform merchant payment solutions, admin verification interfaces, and secure customer-facing portals using React, Node.js, and Express.",
-      "Integrated secure third-party financial clearing APIs and multi-tier session management protocols to guarantee data protection across sensitive multi-party balance settlement operations.",
-      "Optimized high-volume PostgreSQL query execution plans and indexed historical records to decrease latency in financial auditing and compliance reporting pipelines by 40%.",
+      "Designed an event-driven geolocation ingestion engine processing high-frequency GPS streams and dynamic geofencing across 400+ active vehicles, tracking 5,000+ daily trips with zero-downtime real-time operations.",
+      "Built a React/TypeScript admin dashboard with live map rendering and WebSocket real-time sync, enabling fleet operators to monitor vehicle status at 2-second refresh intervals with sub-500ms update latency.",
+      "Architected a secure multi-tenant backend using Node.js, Express, and PostgreSQL with row-level tenant isolation and RBAC policies, supporting 18+ enterprise clients with zero cross-tenant data leakage incidents.",
+      "Secured all tenant API endpoints with JWT authentication, rate limiting, and input sanitization — achieving clean results across 100% of penetration test checkpoints.",
     ],
-    tech: ["Node.js", "Express.js", "React", "PostgreSQL", "MongoDB", "Redis"],
+    tech: ["Node.js", "TypeScript", "React", "Next.js", "PostgreSQL", "WebSocket", "JWT"],
   },
   {
-    title: "Code Coach",
+    title: "Full-Stack Engineer",
+    company: "Addispay Financial Technology",
+    location: "Addis Ababa, Ethiopia",
+    period: "Jan 2024 – Feb 2025",
+    badge: null,
+    points: [
+      "Built full-stack transaction monitoring dashboards using React and TypeScript, enabling operations teams to track 35,000+ daily transactions with real-time status visibility, reducing average transaction review time by 40%.",
+      "Secured payment gateway endpoints with JWT tokenization, HMAC request signing, rate limiting, and input sanitization — eliminating SQL injection and replay-attack vulnerabilities from all production endpoints.",
+      "Reduced frontend dashboard bundle size by 38% through code-splitting and lazy loading, improving Time-to-Interactive by 2.1 seconds and cutting page load time from 4.8s to 2.7s.",
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Redis", "JWT"],
+  },
+  {
+    title: "Code Coach & Technical Instructor",
     company: "Code Jika NGO",
     location: "Addis Ababa, Ethiopia",
-    period: "Oct 2022 – Present",
+    period: "2022 – 2023",
     badge: "Volunteer",
     points: [
-      "Enabling African students to become leaders in the digital industry through CodeJika — a platform for fun, real-world coding for teens.",
-      "Instructed high school students in structural HTML5, CSS3 responsive design, and functional JavaScript programming logic.",
-      "Facilitated interactive lab sessions and collaborative team projects, fostering independent debugging practices and problem-solving skills.",
+      "Mentored 90+ aspiring developers through structured web development curricula covering HTML, CSS, JavaScript, and full-stack project architecture, achieving an 85% course completion rate.",
+      "Designed hands-on workshops introducing industry-standard Git workflows, code review practices, and agile habits to accelerate graduates' time to first job placement.",
     ],
-    tech: ["HTML5", "CSS3", "JavaScript"],
+    tech: ["HTML5", "CSS3", "JavaScript", "Git"],
   },
 ];
 
 const skills = [
-  { label: "Languages", items: ["TypeScript", "JavaScript (ES6+)", "Python", "Go", "SQL", "Bash"] },
-  { label: "Backend", items: ["Node.js", "Express.js", "NestJS", "FastAPI", "Flask", "gRPC", "REST API", "GraphQL"] },
-  { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Redux"] },
-  { label: "Databases & Caching", items: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Redis"] },
-  { label: "Cloud & DevOps", items: ["AWS (EC2, Lambda, S3)", "Vercel", "Docker", "Kubernetes", "CI/CD", "Git", "Linux"] },
-  { label: "Architecture", items: ["Microservices", "Event-Driven", "Serverless", "Payment Systems", "Saga Pattern"] },
+  { label: "Languages", items: ["TypeScript", "JavaScript (ES2022+)", "SQL", "Go", "Bash"] },
+  { label: "Frontend", items: ["React.js", "Next.js", "Remix", "Tailwind CSS", "WebSocket Client"] },
+  { label: "Backend", items: ["Node.js", "Express.js", "RESTful APIs", "WebSocket Servers", "GraphQL", "Microservices"] },
+  { label: "Cloud & Serverless", items: ["AWS Lambda", "Amazon API Gateway", "Amazon S3", "Amazon EC2", "Amazon RDS", "Serverless Framework"] },
+  { label: "Databases & Caching", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+  { label: "DevOps & Tooling", items: ["Docker", "Git / GitHub", "CI/CD Pipelines", "Linux"] },
+  { label: "Architecture", items: ["Distributed Systems", "Multi-Tenant SaaS", "Event-Driven", "Serverless", "Microservices"] },
+  { label: "FinTech Domain", items: ["Payment Gateways", "Automated Reconciliation", "Agency Banking", "Internet Banking", "PCI-DSS"] },
 ];
 
 const achievements = [
-  { icon: "🏆", text: "Inobizz & Korean Embassy Prize — Graduation project: Property Security and Warehouse Management System" },
+  { icon: "🏦", text: "1M+ active users on EagleLion's banking Super App (AWS Lambda, sub-150ms P99)" },
+  { icon: "⚡", text: "78% reduction in settlement cycle time via Automated Reconciliation across 280+ agency nodes" },
+  { icon: "🏆", text: "Inobizz & Korean Embassy Prize — Property Security and Warehouse Management graduation project" },
   { icon: "🎓", text: "Great Distinction — AASTU B.Sc. in Electrical and Computer Engineering (Computer Focus), GPA 3.81 / 4.0" },
-  { icon: "🏦", text: "Technical Team Lead for EagleLion's enterprise fintech suite: Internet Banking, Lottery, and Agency Banking" },
-  { icon: "⚡", text: "40% API latency reduction on payment gateway serving hundreds of active merchants" },
 ];
 
 export default function ResumePage() {
@@ -89,7 +105,7 @@ export default function ResumePage() {
                 Haylemichael Tsega
               </h1>
               <p className="mt-1.5 text-slate-400 font-medium">
-                Senior Full-Stack Developer & Tech Lead · Fintech · Distributed Systems · Cloud
+                Senior Backend Engineer · Distributed Systems · FinTech · Cloud
               </p>
               <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-slate-400">
                 <a href="mailto:remantsega@gmail.com" className="hover:text-violet-400 transition-colors">
@@ -108,7 +124,7 @@ export default function ResumePage() {
               </div>
             </div>
             <div className="flex gap-3 shrink-0">
-              <a href="/HAILEMIKAEL ID.pdf" download>
+              <a href="/Haylemichael_Tsega_Resume.pdf" download>
                 <button className="rounded-full bg-violet-600 px-6 py-3 text-sm font-bold text-white hover:bg-violet-500 transition-colors shadow-lg shadow-violet-600/25">
                   Download PDF
                 </button>
@@ -141,13 +157,14 @@ export default function ResumePage() {
               <span className="flex-1 h-px bg-slate-200" />
             </h2>
             <p className="text-slate-700 leading-relaxed">
-              Senior Full-Stack Developer and Technical Team Lead with 5 years of experience engineering,
-              scaling, and deploying high-availability transaction layers, secure financial services, and
-              real-time distributed software infrastructure. Expert command of the JavaScript/TypeScript
-              ecosystem (Node.js, Express, Next.js, React) combined with extensive experience in
-              performance-optimized backend systems and Python. Proven track record leading engineering
-              squads, establishing reliable database architectures, and reducing application latency via
-              strategic distributed caching. Available for senior full-stack and backend roles globally.
+              Senior Full-Stack Engineer with 5+ years of production experience architecting
+              high-throughput distributed systems, real-time financial platforms, and cloud-native
+              microservices. Specialized in Node.js, TypeScript, and AWS serverless infrastructure,
+              with a proven track record delivering mission-critical fintech systems — including
+              automated reconciliation engines, payment gateways, and banking platforms serving
+              1M+ customers — in regulated, high-compliance environments. Deep expertise in
+              event-driven architecture, Redis-backed performance optimization, multi-tenant SaaS
+              design, and secure API development aligned with financial data security standards.
             </p>
           </motion.section>
 
@@ -160,9 +177,9 @@ export default function ResumePage() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 print-break-inside-avoid"
           >
             {[
-              { v: "5", l: "Years Experience" },
-              { v: "11+", l: "Production Systems" },
-              { v: "40%", l: "API Latency Reduced" },
+              { v: "5+", l: "Years Experience" },
+              { v: "1M+", l: "Users Served" },
+              { v: "78%", l: "Settlement Time Saved" },
               { v: "3.81", l: "University GPA" },
             ].map(({ v, l }) => (
               <div key={l} className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
@@ -267,17 +284,24 @@ export default function ResumePage() {
                   <span>Education</span>
                   <span className="flex-1 h-px bg-slate-200" />
                 </h2>
-                <div className="border-l-2 border-violet-200 pl-5">
-                  <h3 className="font-bold text-slate-900">B.Sc. in Electrical and Computer Engineering (Computer Focus)</h3>
-                  <p className="text-sm text-violet-600 font-semibold mt-0.5">Addis Ababa Science and Technology University (AASTU)</p>
-                  <p className="text-xs text-slate-400 mt-0.5">Addis Ababa, Ethiopia · Class of 2023</p>
-                  <p className="text-sm text-slate-500 mt-2 flex items-center gap-1.5">
-                    <span className="text-amber-500">★</span>
-                    GPA 3.81 / 4.0 · Great Distinction
-                  </p>
-                  <p className="text-xs text-slate-400 mt-1">
-                    Distributed Networks · OOP Analysis · Advanced Data Structures · Software Systems Design
-                  </p>
+                <div className="flex flex-col gap-6">
+                  <div className="border-l-2 border-violet-200 pl-5">
+                    <h3 className="font-bold text-slate-900">B.Sc. in Electrical and Computer Engineering (Computer Focus)</h3>
+                    <p className="text-sm text-violet-600 font-semibold mt-0.5">Addis Ababa Science and Technology University (AASTU)</p>
+                    <p className="text-xs text-slate-400 mt-0.5">Addis Ababa, Ethiopia · Class of 2023</p>
+                    <p className="text-sm text-slate-500 mt-2 flex items-center gap-1.5">
+                      <span className="text-amber-500">★</span>
+                      GPA 3.81 / 4.0 · Great Distinction
+                    </p>
+                    <p className="text-xs text-slate-400 mt-1">
+                      Distributed Networks · OOP Analysis · Advanced Data Structures · Software Systems Design
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-slate-200 pl-5">
+                    <h3 className="font-bold text-slate-900">Associate of Science in Business Administration</h3>
+                    <p className="text-sm text-violet-600 font-semibold mt-0.5">University of the People</p>
+                    <p className="text-xs text-slate-400 mt-0.5">Online · US-Accredited · 2019 – 2021</p>
+                  </div>
                 </div>
               </div>
 
@@ -311,7 +335,7 @@ export default function ResumePage() {
                 Get in Touch
               </button>
             </Link>
-            <a href="/HAILEMIKAEL ID.pdf" download>
+            <a href="/Haylemichael_Tsega_Resume.pdf" download>
               <button className="rounded-full border border-violet-300 text-violet-600 px-6 py-3 text-sm font-semibold hover:bg-violet-50 transition-colors">
                 Download PDF
               </button>
