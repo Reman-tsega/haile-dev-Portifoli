@@ -26,27 +26,32 @@ const caseStudies = {
       layers: [
         {
           name: "API Gateway",
-          detail: "Routes mobile and web traffic, enforces authentication, rate limiting, and request validation before passing to upstream services.",
+          detail:
+            "Routes mobile and web traffic, enforces authentication, rate limiting, and request validation before passing to upstream services.",
           tech: "Go · JWT / OAuth2 · Rate Limiter",
         },
         {
           name: "Core Services",
-          detail: "Payment, E-commerce, Chat Banking, Lottery, and Budgeting — each deployed as an independent Go service with its own data store.",
+          detail:
+            "Payment, E-commerce, Chat Banking, Lottery, and Budgeting — each deployed as an independent Go service with its own data store.",
           tech: "Go · gRPC · REST",
         },
         {
           name: "Event Streaming",
-          detail: "Kafka handles the financial event backbone. RabbitMQ manages task queues with dead-letter queue support for failed message recovery.",
+          detail:
+            "Kafka handles the financial event backbone. RabbitMQ manages task queues with dead-letter queue support for failed message recovery.",
           tech: "Kafka · RabbitMQ · Consumer Groups",
         },
         {
           name: "Data Layer",
-          detail: "Service-owned databases enforce domain isolation. Redis caches hot-path reads and manages distributed session state.",
+          detail:
+            "Service-owned databases enforce domain isolation. Redis caches hot-path reads and manages distributed session state.",
           tech: "PostgreSQL · MongoDB · Redis · ScyllaDB",
         },
         {
           name: "Infrastructure",
-          detail: "Containerized workloads on Kubernetes with rolling deployments, readiness probes, and auto-scaling for traffic spikes.",
+          detail:
+            "Containerized workloads on Kubernetes with rolling deployments, readiness probes, and auto-scaling for traffic spikes.",
           tech: "Kubernetes · Docker · CI/CD · AWS",
         },
       ],
@@ -81,8 +86,22 @@ const caseStudies = {
       "Zero-downtime deployments achieved across all services on Kubernetes",
       "Financial events processed with at-least-once delivery guarantees via Kafka consumer groups with idempotent handlers",
     ],
-    tech: ["Go", "Node.js", "Kafka", "RabbitMQ", "Redis", "Kubernetes", "Docker", "gRPC", "PostgreSQL", "MongoDB", "ScyllaDB", "AWS"],
-    lesson: "The hardest part of a super app backend isn't any individual service — it's maintaining their independence. Every shortcut crossing service boundaries becomes debt that limits your ability to scale domains independently. Strict ownership contracts and event-driven integration are not optional in financial systems; they are the architecture.",
+    tech: [
+      "Go",
+      "Node.js",
+      "Kafka",
+      "RabbitMQ",
+      "Redis",
+      "Kubernetes",
+      "Docker",
+      "gRPC",
+      "PostgreSQL",
+      "MongoDB",
+      "ScyllaDB",
+      "AWS",
+    ],
+    lesson:
+      "The hardest part of a super app backend isn't any individual service — it's maintaining their independence. Every shortcut crossing service boundaries becomes debt that limits your ability to scale domains independently. Strict ownership contracts and event-driven integration are not optional in financial systems; they are the architecture.",
   },
 
   "addis-pay": {
@@ -93,7 +112,7 @@ const caseStudies = {
     period: "Nov 2023 – Sep 2024",
     status: "Live · Production",
     live: "https://addispay.et/",
-    img: "/addispay.PNG",
+    img: "/addis_pay.png",
     accent: "emerald",
     overview:
       "A production payment gateway enabling Ethiopian merchants to accept digital payments through a unified API that integrates with local banking systems and digital wallets. The platform serves hundreds of active merchants and handles real-time transaction processing with a full merchant dashboard for monitoring and reporting.",
@@ -105,27 +124,32 @@ const caseStudies = {
       layers: [
         {
           name: "Merchant API",
-          detail: "REST endpoints for payment initiation, status polling, webhook subscriptions, and merchant onboarding — documented with Swagger.",
+          detail:
+            "REST endpoints for payment initiation, status polling, webhook subscriptions, and merchant onboarding — documented with Swagger.",
           tech: "Node.js · Express.js · Swagger",
         },
         {
           name: "Payment Processor",
-          detail: "Orchestrates calls to bank and wallet providers, manages payment state machine, handles retries with exponential backoff and circuit breaking.",
+          detail:
+            "Orchestrates calls to bank and wallet providers, manages payment state machine, handles retries with exponential backoff and circuit breaking.",
           tech: "Node.js · Provider Adapters · State Machine",
         },
         {
           name: "Idempotency Layer",
-          detail: "Redis distributed locks ensure that retried payment requests never produce duplicate charges — critical for financial correctness on unreliable networks.",
+          detail:
+            "Redis distributed locks ensure that retried payment requests never produce duplicate charges — critical for financial correctness on unreliable networks.",
           tech: "Redis · Distributed Locks · Idempotency Keys",
         },
         {
           name: "Data Storage",
-          detail: "PostgreSQL for transactional financial records; MongoDB for merchant config and session data; Redis for cache and rate limiting.",
+          detail:
+            "PostgreSQL for transactional financial records; MongoDB for merchant config and session data; Redis for cache and rate limiting.",
           tech: "PostgreSQL · MongoDB · Redis",
         },
         {
           name: "Merchant Dashboard",
-          detail: "Real-time transaction monitoring, date-range reporting, CSV export, and balance summaries built with React and server-sent events.",
+          detail:
+            "Real-time transaction monitoring, date-range reporting, CSV export, and balance summaries built with React and server-sent events.",
           tech: "React · SSE · Chart.js",
         },
       ],
@@ -160,8 +184,19 @@ const caseStudies = {
       "Zero duplicate-charge incidents after idempotency layer deployment",
       "Real-time webhook delivery with 99%+ success rate on 30-day rolling window",
     ],
-    tech: ["Node.js", "Express.js", "MongoDB", "Redis", "PostgreSQL", "React", "Docker", "REST API", "JWT"],
-    lesson: "Payment systems are 20% payment logic and 80% correctness guarantees. Idempotency, atomic state transitions, and observable failure modes are requirements, not optimizations. If I were starting this project again, the idempotency layer would be the first thing built — not the third.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis",
+      "PostgreSQL",
+      "React",
+      "Docker",
+      "REST API",
+      "JWT",
+    ],
+    lesson:
+      "Payment systems are 20% payment logic and 80% correctness guarantees. Idempotency, atomic state transitions, and observable failure modes are requirements, not optimizations. If I were starting this project again, the idempotency layer would be the first thing built — not the third.",
   },
 
   "addis-bike": {
@@ -176,11 +211,13 @@ const caseStudies = {
     gallery: [
       {
         src: "/addisbike2.png",
-        caption: "Operations dashboard — live revenue, payment health, and fleet metrics",
+        caption:
+          "Operations dashboard — live revenue, payment health, and fleet metrics",
       },
       {
         src: "/addisbike3.png",
-        caption: "IoT device control — remote lock/unlock, telemetry, and GSM signal monitoring",
+        caption:
+          "IoT device control — remote lock/unlock, telemetry, and GSM signal monitoring",
       },
     ],
     accent: "orange",
@@ -194,22 +231,26 @@ const caseStudies = {
       layers: [
         {
           name: "Admin Dashboard",
-          detail: "React SPA with fleet map, bike status board, rental history, user management, and financial reporting.",
+          detail:
+            "React SPA with fleet map, bike status board, rental history, user management, and financial reporting.",
           tech: "React · React Query · Chart.js",
         },
         {
           name: "REST API",
-          detail: "Business logic layer handling rental lifecycle, billing computation, inventory management, user auth, and reporting aggregations.",
+          detail:
+            "Business logic layer handling rental lifecycle, billing computation, inventory management, user auth, and reporting aggregations.",
           tech: "Node.js · Express.js · JWT",
         },
         {
           name: "Database",
-          detail: "MongoDB document store for bikes, stations, users, and rental session records. Indexed for dashboard query performance.",
+          detail:
+            "MongoDB document store for bikes, stations, users, and rental session records. Indexed for dashboard query performance.",
           tech: "MongoDB · Mongoose",
         },
         {
           name: "Infrastructure",
-          detail: "Docker-containerized application with Nginx reverse proxy, deployed on a managed VPS for cost-effective city-scale operations.",
+          detail:
+            "Docker-containerized application with Nginx reverse proxy, deployed on a managed VPS for cost-effective city-scale operations.",
           tech: "Docker · Docker Compose · Nginx",
         },
       ],
@@ -244,8 +285,17 @@ const caseStudies = {
       "Financial reporting module replacing manual accounting reconciliation",
       "Zero data migration issues on production deployment — running live from launch day",
     ],
-    tech: ["Node.js", "Express.js", "React", "MongoDB", "Docker", "Nginx", "JWT"],
-    lesson: "Architecture decisions should match team size and operational maturity, not resume ambitions. Choosing a well-structured monolith over microservices for this project was the right call — it shipped faster, was easier to debug, and the small ops team could own the full system without specialized Kubernetes knowledge.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "React",
+      "MongoDB",
+      "Docker",
+      "Nginx",
+      "JWT",
+    ],
+    lesson:
+      "Architecture decisions should match team size and operational maturity, not resume ambitions. Choosing a well-structured monolith over microservices for this project was the right call — it shipped faster, was easier to debug, and the small ops team could own the full system without specialized Kubernetes knowledge.",
   },
 
   "dir-link": {
@@ -268,22 +318,26 @@ const caseStudies = {
       layers: [
         {
           name: "Operations Dashboard",
-          detail: "React SPA with live order board, driver status table, route assignment UI, and delivery history reporting.",
+          detail:
+            "React SPA with live order board, driver status table, route assignment UI, and delivery history reporting.",
           tech: "React · React Query · Tailwind CSS",
         },
         {
           name: "Dispatch API",
-          detail: "REST endpoints handling order lifecycle (created → assigned → in-transit → delivered), driver management, and reporting aggregations.",
+          detail:
+            "REST endpoints handling order lifecycle (created → assigned → in-transit → delivered), driver management, and reporting aggregations.",
           tech: "Node.js · Express.js · REST",
         },
         {
           name: "Database",
-          detail: "MongoDB for flexible order and driver documents; compound indexes for efficient status-based queries on high-volume order tables.",
+          detail:
+            "MongoDB for flexible order and driver documents; compound indexes for efficient status-based queries on high-volume order tables.",
           tech: "MongoDB · Mongoose",
         },
         {
           name: "Infrastructure",
-          detail: "Docker-containerized service deployed behind Nginx with PM2 process management for zero-restart deployments.",
+          detail:
+            "Docker-containerized service deployed behind Nginx with PM2 process management for zero-restart deployments.",
           tech: "Docker · Nginx · PM2",
         },
       ],
@@ -318,8 +372,17 @@ const caseStudies = {
       "Historical reporting query time reduced from 3s+ to under 300ms via indexing",
       "Shipped to production on schedule within a 3-month engagement",
     ],
-    tech: ["React", "Node.js", "Express.js", "MongoDB", "Docker", "Nginx", "JWT"],
-    lesson: "Real-time UX does not always require WebSockets. Understanding what 'real-time' actually means to the end user — in this case, dispatchers checking status every few seconds, not millisecond-precision traders — lets you make dramatically simpler engineering choices that still fully satisfy the requirement.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Docker",
+      "Nginx",
+      "JWT",
+    ],
+    lesson:
+      "Real-time UX does not always require WebSockets. Understanding what 'real-time' actually means to the end user — in this case, dispatchers checking status every few seconds, not millisecond-precision traders — lets you make dramatically simpler engineering choices that still fully satisfy the requirement.",
   },
 
   "aurora-plc": {
@@ -342,22 +405,26 @@ const caseStudies = {
       layers: [
         {
           name: "Public Site",
-          detail: "SSR-rendered pages for company profile, products, services, jobs, and blog — optimised for search engine indexing.",
+          detail:
+            "SSR-rendered pages for company profile, products, services, jobs, and blog — optimised for search engine indexing.",
           tech: "Next.js · SSR · Tailwind CSS",
         },
         {
           name: "Admin Panel",
-          detail: "Authenticated CMS for managing all content types: products, services, blog posts, job listings, applicants, and CRM entries.",
+          detail:
+            "Authenticated CMS for managing all content types: products, services, blog posts, job listings, applicants, and CRM entries.",
           tech: "Next.js · React · Client-side Auth",
         },
         {
           name: "API Layer",
-          detail: "Next.js API routes handling all CRUD operations for content, job applications, and CRM records.",
+          detail:
+            "Next.js API routes handling all CRUD operations for content, job applications, and CRM records.",
           tech: "Node.js · Next.js API Routes · REST",
         },
         {
           name: "Database",
-          detail: "MongoDB for all content types with flexible schemas allowing marketing to add custom fields without code changes.",
+          detail:
+            "MongoDB for all content types with flexible schemas allowing marketing to add custom fields without code changes.",
           tech: "MongoDB · Mongoose",
         },
       ],
@@ -393,7 +460,8 @@ const caseStudies = {
       "Full applicant tracking pipeline digitising Aurora's hiring workflow",
     ],
     tech: ["Next.js", "Node.js", "MongoDB", "React", "Tailwind CSS", "JWT"],
-    lesson: "A well-scoped internal tool often delivers more business value than a sophisticated external one. By scoping the admin CMS to exactly what each role needed — no more, no less — adoption was immediate. The platform was in active daily use by non-technical staff from week one.",
+    lesson:
+      "A well-scoped internal tool often delivers more business value than a sophisticated external one. By scoping the admin CMS to exactly what each role needed — no more, no less — adoption was immediate. The platform was in active daily use by non-technical staff from week one.",
   },
 };
 
@@ -479,16 +547,23 @@ export default function CaseStudyPage({ params }) {
     >
       {/* ─── HERO ─── */}
       <div className="relative border-b border-slate-800/70 px-6 py-14 overflow-hidden">
-        <div className={`pointer-events-none absolute -top-24 -right-24 w-96 h-96 ${a.glow} rounded-full blur-[100px]`} />
+        <div
+          className={`pointer-events-none absolute -top-24 -right-24 w-96 h-96 ${a.glow} rounded-full blur-[100px]`}
+        />
         <div className="max-w-5xl mx-auto relative z-10">
           <Link href="/portfolio">
             <span className="text-xs text-slate-500 hover:text-slate-300 transition-colors flex items-center gap-1.5 mb-8 w-fit group">
-              <span className="group-hover:-translate-x-0.5 transition-transform">←</span> Back to Portfolio
+              <span className="group-hover:-translate-x-0.5 transition-transform">
+                ←
+              </span>{" "}
+              Back to Portfolio
             </span>
           </Link>
 
           <div className="flex flex-wrap items-center gap-2.5 mb-5">
-            <span className={`text-xs font-semibold border px-3 py-1 rounded-full ${a.badge}`}>
+            <span
+              className={`text-xs font-semibold border px-3 py-1 rounded-full ${a.badge}`}
+            >
               {study.subtitle}
             </span>
             <span className="text-xs font-semibold text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-3 py-1 rounded-full">
@@ -511,15 +586,22 @@ export default function CaseStudyPage({ params }) {
               { l: "Status", v: study.status },
             ].map(({ l, v }) => (
               <div key={l}>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold mb-1">{l}</p>
-                <p className="text-sm text-slate-300 font-medium leading-snug">{v}</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold mb-1">
+                  {l}
+                </p>
+                <p className="text-sm text-slate-300 font-medium leading-snug">
+                  {v}
+                </p>
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap gap-2 mt-4">
             {study.tech.map((t, i) => (
-              <span key={i} className={`text-xs border px-2.5 py-1 rounded-full font-medium ${a.tag}`}>
+              <span
+                key={i}
+                className={`text-xs border px-2.5 py-1 rounded-full font-medium ${a.tag}`}
+              >
                 {t}
               </span>
             ))}
@@ -531,7 +613,12 @@ export default function CaseStudyPage({ params }) {
       <div className="bg-slate-900/60 border-b border-slate-800/60 px-6 py-8">
         <div className="max-w-5xl mx-auto">
           <div className="relative h-64 md:h-[400px] rounded-xl overflow-hidden border border-slate-700/50 shadow-2xl">
-            <Image src={study.img} alt={study.title} fill className="object-contain bg-slate-950" />
+            <Image
+              src={study.img}
+              alt={study.title}
+              fill
+              className="object-contain bg-slate-950"
+            />
           </div>
 
           {study.gallery && (
@@ -558,7 +645,6 @@ export default function CaseStudyPage({ params }) {
 
       {/* ─── CONTENT ─── */}
       <div className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-16">
-
         {/* Problem */}
         <SectionBlock label="The Problem">
           <div className="bg-slate-900 rounded-2xl border border-slate-800 p-7">
@@ -568,25 +654,36 @@ export default function CaseStudyPage({ params }) {
 
         {/* Architecture */}
         <SectionBlock label="System Architecture">
-          <p className="text-slate-400 leading-relaxed text-sm">{study.architecture.description}</p>
+          <p className="text-slate-400 leading-relaxed text-sm">
+            {study.architecture.description}
+          </p>
           <div className="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
             {study.architecture.layers.map((layer, i) => (
               <div
                 key={i}
                 className={`flex flex-col sm:flex-row sm:items-start gap-4 px-6 py-5 ${
-                  i < study.architecture.layers.length - 1 ? "border-b border-slate-800/80" : ""
+                  i < study.architecture.layers.length - 1
+                    ? "border-b border-slate-800/80"
+                    : ""
                 }`}
               >
                 <div className="sm:w-44 shrink-0 mt-0.5">
-                  <span className={`text-xs font-bold px-2.5 py-1.5 rounded-full border inline-flex ${a.badge}`}>
+                  <span
+                    className={`text-xs font-bold px-2.5 py-1.5 rounded-full border inline-flex ${a.badge}`}
+                  >
                     {layer.name}
                   </span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-slate-300 text-sm leading-relaxed mb-2.5">{layer.detail}</p>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-2.5">
+                    {layer.detail}
+                  </p>
                   <div className="flex flex-wrap gap-1.5">
                     {layer.tech.split(" · ").map((t, ti) => (
-                      <span key={ti} className="text-[10px] bg-slate-800 text-slate-500 px-2 py-0.5 rounded border border-slate-700">
+                      <span
+                        key={ti}
+                        className="text-[10px] bg-slate-800 text-slate-500 px-2 py-0.5 rounded border border-slate-700"
+                      >
                         {t}
                       </span>
                     ))}
@@ -609,7 +706,9 @@ export default function CaseStudyPage({ params }) {
                 transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="flex gap-3.5 bg-slate-900 rounded-xl border border-slate-800 px-5 py-4"
               >
-                <span className={`mt-0.5 shrink-0 w-5 h-5 rounded-full ${a.num} flex items-center justify-center text-[10px] font-bold`}>
+                <span
+                  className={`mt-0.5 shrink-0 w-5 h-5 rounded-full ${a.num} flex items-center justify-center text-[10px] font-bold`}
+                >
                   {i + 1}
                 </span>
                 <p className="text-slate-300 text-sm leading-relaxed">{item}</p>
@@ -631,10 +730,14 @@ export default function CaseStudyPage({ params }) {
                 className="bg-slate-900 rounded-2xl border border-slate-800 p-6"
               >
                 <div className="flex items-center gap-2.5 mb-3">
-                  <div className={`w-2 h-2 rounded-full ${a.dot} flex-shrink-0`} />
+                  <div
+                    className={`w-2 h-2 rounded-full ${a.dot} flex-shrink-0`}
+                  />
                   <h3 className="font-bold text-white text-base">{ch.title}</h3>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed">{ch.description}</p>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  {ch.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -652,7 +755,9 @@ export default function CaseStudyPage({ params }) {
                 transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="flex items-start gap-3 bg-slate-900 rounded-xl border border-slate-800 px-5 py-4"
               >
-                <span className={`mt-1 shrink-0 w-2 h-2 rounded-full ${a.dot}`} />
+                <span
+                  className={`mt-1 shrink-0 w-2 h-2 rounded-full ${a.dot}`}
+                />
                 <p className="text-slate-300 text-sm leading-relaxed">{r}</p>
               </motion.div>
             ))}
@@ -661,7 +766,9 @@ export default function CaseStudyPage({ params }) {
 
         {/* Lesson */}
         <SectionBlock label="Key Takeaway">
-          <div className={`bg-slate-900 border border-slate-800 rounded-2xl p-7 ring-1 ${a.ring}`}>
+          <div
+            className={`bg-slate-900 border border-slate-800 rounded-2xl p-7 ring-1 ${a.ring}`}
+          >
             <p className="text-slate-200 leading-relaxed italic text-base">
               &ldquo;{study.lesson}&rdquo;
             </p>
@@ -671,7 +778,9 @@ export default function CaseStudyPage({ params }) {
         {/* CTA navigation */}
         <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-800">
           <a href={study.live} target="_blank" rel="noreferrer">
-            <button className={`px-6 py-3 rounded-full bg-gradient-to-r ${a.gradient} text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg`}>
+            <button
+              className={`px-6 py-3 rounded-full bg-gradient-to-r ${a.gradient} text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg`}
+            >
               View Live Site ↗
             </button>
           </a>
