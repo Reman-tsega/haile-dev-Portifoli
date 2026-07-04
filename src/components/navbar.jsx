@@ -76,6 +76,7 @@ const Navbar = () => {
       {/* DESKTOP LINKS */}
       <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
         {links.map((link) => (
+          // this is the commentthat is being re d kdfl
           <NavLink link={link} key={link.id} />
         ))}
       </nav>

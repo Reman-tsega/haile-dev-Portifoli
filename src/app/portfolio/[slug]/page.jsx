@@ -172,7 +172,17 @@ const caseStudies = {
     period: "2023",
     status: "Live · Production",
     live: "https://admin.addisbike.org/",
-    img: "/addisbikedashboard.png",
+    img: "/addisbike1.png",
+    gallery: [
+      {
+        src: "/addisbike2.png",
+        caption: "Operations dashboard — live revenue, payment health, and fleet metrics",
+      },
+      {
+        src: "/addisbike3.png",
+        caption: "IoT device control — remote lock/unlock, telemetry, and GSM signal monitoring",
+      },
+    ],
     accent: "orange",
     overview:
       "A complete bicycle rental platform for Addis Ababa, managing the full rental lifecycle across multiple city stations. The system includes a web admin dashboard for fleet operators, handling bike inventory, user accounts, rental sessions, and financial transactions — replacing entirely manual station management processes.",
@@ -523,6 +533,26 @@ export default function CaseStudyPage({ params }) {
           <div className="relative h-64 md:h-[400px] rounded-xl overflow-hidden border border-slate-700/50 shadow-2xl">
             <Image src={study.img} alt={study.title} fill className="object-contain bg-slate-950" />
           </div>
+
+          {study.gallery && (
+            <div className="grid sm:grid-cols-2 gap-4 mt-4">
+              {study.gallery.map((shot, i) => (
+                <figure key={i} className="flex flex-col gap-2">
+                  <div className="relative h-48 md:h-56 rounded-xl overflow-hidden border border-slate-700/50 shadow-xl">
+                    <Image
+                      src={shot.src}
+                      alt={shot.caption}
+                      fill
+                      className="object-contain bg-slate-950"
+                    />
+                  </div>
+                  <figcaption className="text-xs text-slate-500 leading-relaxed px-1">
+                    {shot.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

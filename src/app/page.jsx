@@ -304,10 +304,10 @@ export default function Homepage() {
             <div className="relative">
               {/* Glow ring */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/30 to-indigo-600/20 blur-2xl scale-110" />
-              <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-violet-900/30">
+              <div className="relative w-96 h-[30rem] rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-violet-900/30">
                 <Image
-                  src="/developer_photo.jpg"
-                  alt="Haylemichael Tsega — Senior Backend Engineer"
+                  src="/heroimage.png"
+                  alt="Haylemichael Tsega — Senior Backend Engineer at work"
                   fill
                   className="object-cover"
                   priority

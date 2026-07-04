@@ -38,42 +38,14 @@ const items = [
     title: "Addis Bike Platform",
     sub: "Urban Mobility System",
     desc: "Full-stack bicycle rental platform for Addis Ababa — fleet management, user administration, and transaction tracking for city-scale bike sharing operations.",
-    img: "/addisbikedashboard.png",
-    live: "https://admin.addisbike.org/",
+    img: "/addisbike1.png",
+    live: "https://addisbike.org/",
     tech: ["Node.js", "React", "MongoDB", "Docker"],
     category: "Logistics",
     featured: true,
     impact: "City-scale fleet management",
     impactColor: "text-orange-400",
     accent: "from-orange-600 to-amber-700",
-  },
-  {
-    id: "dir-link",
-    title: "Dir Link",
-    sub: "Shipping Connector Dashboard",
-    desc: "Logistics platform for delivery companies with real-time order administration, driver management, route tracking, and delivery status updates.",
-    img: "/dirlink.PNG",
-    live: "https://dirlink.addissystems.et/dashboard",
-    tech: ["React", "Node.js", "Express.js", "MongoDB"],
-    category: "Logistics",
-    featured: false,
-    impact: null,
-    impactColor: null,
-    accent: "from-sky-600 to-blue-700",
-  },
-  {
-    id: "aurora-plc",
-    title: "Aurora General PLC",
-    sub: "Company Management Platform",
-    desc: "Multi-feature platform covering company portfolio, products, job postings, applicant tracking, CRM, and a dynamic blog — deployed to production for a general services company.",
-    img: "/Aurora.png",
-    live: "https://www.auroraplc.com/",
-    tech: ["Next.js", "Node.js", "MongoDB"],
-    category: "SaaS",
-    featured: false,
-    impact: null,
-    impactColor: null,
-    accent: "from-purple-600 to-violet-700",
   },
   {
     id: "addis-systems",
@@ -90,11 +62,25 @@ const items = [
     accent: "from-slate-600 to-slate-700",
   },
   {
+    id: "rentx-property",
+    title: "RentX Property Management",
+    sub: "Tenant & Authority Portal",
+    desc: "Property administration platform for Addis Ababa's Corridor & River Sides Development Authority — tenants browse available houses, request rentals, submit rent payments, and file maintenance reports; admins manage properties, rentals, tenants, payment verification, late payments, notices, and reports.",
+    img: "/pp.png",
+    live: "https://aa-city-property-managemnt.vercel.app/",
+    tech: ["React", "Redux Toolkit", "Vite", "Tailwind CSS", "REST API"],
+    category: "SaaS",
+    featured: false,
+    impact: "Rentals · payments · maintenance · notices",
+    impactColor: "text-emerald-400",
+    accent: "from-emerald-600 to-green-700",
+  },
+  {
     id: "blue-clerk",
     title: "Blue Clerk",
     sub: "Housing Broker CRM",
     desc: "CRM tailored for the housing industry: lead tracking, property management, client communication, and deal pipeline management.",
-    img: "/blueclerk.png",
+    img: "/blueckerck.png",
     live: "https://blueclerk.com/",
     tech: ["React", "Node.js", "PostgreSQL"],
     category: "SaaS",
@@ -109,7 +95,7 @@ const items = [
     sub: "School Management System",
     desc: "Student administration, course management, attendance tracking, and financial reporting platform for a beauty school.",
     img: "/chuchu.png",
-    live: "http://196.188.249.33:6053/",
+    live: "https://beauty-school-client.vercel.app/",
     tech: ["React", "Node.js", "MongoDB"],
     category: "SaaS",
     featured: false,
@@ -118,19 +104,85 @@ const items = [
     accent: "from-pink-600 to-rose-700",
   },
   {
-    id: "mak-salon",
-    title: "Mak Beauty Salon",
-    sub: "Service Landing Page",
-    desc: "Polished landing page showcasing beauty services, gallery, and online booking for a premium Addis Ababa salon.",
-    img: "/mak_bauty_salon.PNG",
-    live: "https://www.makbeautysalonandspa.com/",
-    tech: ["Next.js", "Tailwind CSS"],
-    category: "Web",
+    id: "mindset-lms",
+    title: "Mindset LMS",
+    sub: "E-Learning Platform",
+    desc: "Enterprise-grade learning management system covering the full learning lifecycle — course publishing, enrollment, quizzes, live classes, verifiable certificates, AI-powered assistant, payments, news feeds, and analytics across student, instructor, and admin portals.",
+    img: "/mindset_lms.png",
+    live: "https://mindset-elearning.vercel.app/",
+    tech: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "React",
+      "Supabase",
+      "AI Integration",
+    ],
+    category: "SaaS",
+    featured: false,
+    impact: "4 portals · AI assistant · certification",
+    impactColor: "text-sky-400",
+    accent: "from-cyan-600 to-blue-700",
+  },
+  {
+    id: "nextlevel-gymflow",
+    title: "Next Level Fitness",
+    sub: "Gym Management Platform",
+    desc: "Premium gym platform pairing a public site — services, membership tiers, class schedules, trainer profiles, and wellness programs — with an admin dashboard for managing members, subscriptions, trainers, and classes.",
+    img: "/nextlevel_gym.png",
+    live: "https://nextlevel-gymflow.vercel.app/",
+    tech: ["React", "Vite", "Tailwind CSS", "REST API"],
+    category: "SaaS",
+    featured: false,
+    impact: "Members · subscriptions · classes · trainers",
+    impactColor: "text-lime-400",
+    accent: "from-lime-600 to-green-700",
+  },
+  {
+    id: "dir-link",
+    title: "Dir Link",
+    sub: "Shipping Connector Dashboard",
+    desc: "Logistics platform for delivery companies with real-time order administration, driver management, route tracking, and delivery status updates.",
+    img: "/dirlink.PNG",
+    live: "#",
+    tech: ["React", "Node.js", "Express.js", "MongoDB"],
+    category: "Logistics",
     featured: false,
     impact: null,
     impactColor: null,
-    accent: "from-rose-600 to-pink-700",
+    accent: "from-sky-600 to-blue-700",
   },
+  {
+    id: "aurora-plc",
+    title: "Aurora General PLC",
+    sub: "Company Management Platform",
+    desc: "Multi-feature platform covering company portfolio, products, job postings, applicant tracking, CRM, and a dynamic blog — deployed to production for a general services company.",
+    img: "/Aurora.png",
+    // live: "https://www.auroraplc.com/",
+    live: "#",
+    tech: ["Next.js", "Node.js", "MongoDB"],
+    category: "SaaS",
+    featured: false,
+    impact: null,
+    impactColor: null,
+    accent: "from-purple-600 to-violet-700",
+  },
+
+  // {
+  //   id: "mak-salon",
+  //   title: "Mak Beauty Salon",
+  //   sub: "Service Landing Page",
+  //   desc: "Polished landing page showcasing beauty services, gallery, and online booking for a premium Addis Ababa salon.",
+  //   img: "/mak_bauty_salon.PNG",
+  //   live: "https://www.makbeautysalonandspa.com/",
+  //   tech: ["Next.js", "Tailwind CSS"],
+  //   category: "Web",
+  //   featured: false,
+  //   impact: null,
+  //   impactColor: null,
+  //   accent: "from-rose-600 to-pink-700",
+  // },
   {
     id: "noliga-engineering",
     title: "Noliga Engineering",
@@ -184,8 +236,8 @@ export default function PortfolioPage() {
               Production Systems
             </h1>
             <p className="text-slate-400 max-w-xl mx-auto leading-relaxed">
-              Fintech platforms, payment infrastructure, logistics systems, and SaaS products —
-              each shipped to production and actively used.
+              Fintech platforms, payment infrastructure, logistics systems, and
+              SaaS products — each shipped to production and actively used.
             </p>
           </motion.div>
         </div>
@@ -213,7 +265,7 @@ export default function PortfolioPage() {
                     src={item.img}
                     alt={item.title}
                     fill
-                    className="object-contain transition duration-500 group-hover:scale-105"
+                    className="object-cover object-top transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
                   <div className="absolute top-3 right-3">
@@ -229,14 +281,20 @@ export default function PortfolioPage() {
                     <p className="text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1">
                       {item.sub}
                     </p>
-                    <h2 className="font-bold text-white text-base">{item.title}</h2>
+                    <h2 className="font-bold text-white text-base">
+                      {item.title}
+                    </h2>
                   </div>
-                  <p className="text-slate-400 text-xs leading-relaxed flex-1">{item.desc}</p>
+                  <p className="text-slate-400 text-xs leading-relaxed flex-1">
+                    {item.desc}
+                  </p>
 
                   {item.impact && (
                     <div className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
-                      <span className={`text-xs font-semibold ${item.impactColor}`}>
+                      <span
+                        className={`text-xs font-semibold ${item.impactColor}`}
+                      >
                         {item.impact}
                       </span>
                     </div>
@@ -252,7 +310,9 @@ export default function PortfolioPage() {
                       </span>
                     ))}
                     {item.tech.length > 4 && (
-                      <span className="text-[10px] text-slate-500">+{item.tech.length - 4}</span>
+                      <span className="text-[10px] text-slate-500">
+                        +{item.tech.length - 4}
+                      </span>
                     )}
                   </div>
 
@@ -290,7 +350,11 @@ export default function PortfolioPage() {
             </p>
 
             {/* Category filter */}
-            <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by category">
+            <div
+              className="flex flex-wrap gap-2"
+              role="group"
+              aria-label="Filter by category"
+            >
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -307,7 +371,10 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <motion.div
+            layout
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          >
             <AnimatePresence mode="popLayout">
               {filteredRest.map((item) => (
                 <motion.article
@@ -319,12 +386,12 @@ export default function PortfolioPage() {
                   transition={{ duration: 0.25 }}
                   className="group bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden flex flex-col hover:border-slate-700 transition-all duration-300"
                 >
-                  <div className="relative h-36 bg-slate-800 overflow-hidden">
+                  <div className="relative h-44 bg-slate-800 overflow-hidden">
                     <Image
                       src={item.img}
                       alt={item.title}
                       fill
-                      className="object-contain transition duration-500 group-hover:scale-105"
+                      className="object-cover object-top transition duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                   </div>
@@ -333,7 +400,9 @@ export default function PortfolioPage() {
                       <p className="text-[9px] uppercase tracking-wider text-slate-500 font-bold mb-0.5">
                         {item.sub}
                       </p>
-                      <h3 className="font-bold text-white text-sm">{item.title}</h3>
+                      <h3 className="font-bold text-white text-sm">
+                        {item.title}
+                      </h3>
                     </div>
                     <p className="text-slate-400 text-xs leading-relaxed line-clamp-2 flex-1">
                       {item.desc}
@@ -355,7 +424,12 @@ export default function PortfolioPage() {
                       >
                         Preview
                       </button>
-                      <a href={item.live} target="_blank" rel="noreferrer" className="flex-1">
+                      <a
+                        href={item.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex-1"
+                      >
                         <button className="w-full rounded-full bg-violet-600 text-white text-xs font-semibold py-1.5 hover:bg-violet-500 transition-colors">
                           Live ↗
                         </button>
@@ -375,10 +449,12 @@ export default function PortfolioPage() {
           <p className="text-xs uppercase tracking-widest text-slate-500 font-semibold mb-4">
             Let&apos;s Build Together
           </p>
-          <h2 className="text-3xl font-bold text-white mb-4">Have a project in mind?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Have a project in mind?
+          </h2>
           <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-lg mx-auto">
-            I build backend systems that scale — from payment gateways to distributed
-            microservices. Let&apos;s bring your idea to production.
+            I build backend systems that scale — from payment gateways to
+            distributed microservices. Let&apos;s bring your idea to production.
           </p>
           <Link href="/contact">
             <button className="rounded-full bg-violet-600 px-8 py-4 text-sm font-bold text-white hover:bg-violet-500 transition-colors shadow-lg shadow-violet-600/25">
@@ -424,23 +500,39 @@ export default function PortfolioPage() {
                       <p className="text-[10px] uppercase tracking-widest text-violet-400 font-bold mb-1">
                         {quickView.sub}
                       </p>
-                      <h2 className="text-xl font-bold text-white">{quickView.title}</h2>
+                      <h2 className="text-xl font-bold text-white">
+                        {quickView.title}
+                      </h2>
                     </div>
                     <button
                       onClick={() => setQuickView(null)}
                       className="shrink-0 text-slate-400 hover:text-white transition-colors"
                       aria-label="Close preview"
                     >
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
                       </svg>
                     </button>
                   </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">{quickView.desc}</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    {quickView.desc}
+                  </p>
                   {quickView.impact && (
                     <div className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                      <span className={`text-xs font-semibold ${quickView.impactColor}`}>
+                      <span
+                        className={`text-xs font-semibold ${quickView.impactColor}`}
+                      >
                         {quickView.impact}
                       </span>
                     </div>
@@ -467,7 +559,12 @@ export default function PortfolioPage() {
                         </button>
                       </Link>
                     )}
-                    <a href={quickView.live} target="_blank" rel="noreferrer" className="flex-1">
+                    <a
+                      href={quickView.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1"
+                    >
                       <button className="w-full rounded-full bg-violet-600 text-white text-sm font-semibold py-2.5 hover:bg-violet-500 transition-colors">
                         Live Site ↗
                       </button>
