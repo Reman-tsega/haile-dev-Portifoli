@@ -24,7 +24,7 @@ const items = [
     title: "AddisPay Gateway",
     sub: "Payment Infrastructure",
     desc: "Production payment gateway serving hundreds of merchants with secure checkout APIs, real-time transaction reporting, and 40% faster API responses via Redis optimization.",
-    img: "/addispay.PNG",
+    img: "/addis_pay.png",
     live: "https://addispay.et/",
     tech: ["Node.js", "Express.js", "MongoDB", "Redis", "PostgreSQL"],
     category: "Fintech",
